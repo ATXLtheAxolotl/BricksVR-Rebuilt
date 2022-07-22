@@ -1,14 +1,6 @@
-# BricksVR
+# BricksVR Reforged
 
-This is the open source mirror of the main BricksVR Unity game. The purpose of this mirror is to assist with ongoing modding efforts happening in Discord and to act as a learning resource for those building games or those just curious about how a game works.
-
-I'm also open-sourcing all assets generated for/by BricksVR including Brick models and artwork. This work is licensed under MIT and can be re-purposed or copied directly into personal or commercial projects without attribution.
-
-The game is available for Oculus Quest [here](https://www.oculus.com/experiences/quest/4018602774873329/).
-
-## Running the project
-
-This project is not in a state where it will run. The BricksVR game has dependencies on several paid services including GCP, Normcore, and premium assets and packages. Everything premium has been removed from this repository. The GitHub repo is meant as a reference to read and learn from, and not as a way to contribute to the BricksVR project. BricksVR is currently not under development.
+This purpose of this project is the continue developing a game named [BricksVR](https://github.com/d12/bricksvr-game).
 
 ## Licensing
 
