@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-using UnityEngine.UI.ProceduralImage;
+//using UnityEngine.UI.ProceduralImage; PRO ASSET
 
 public class RangeSelector : MonoBehaviour
 {

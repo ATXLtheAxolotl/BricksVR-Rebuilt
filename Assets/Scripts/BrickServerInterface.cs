@@ -46,6 +46,24 @@ public class BrickServerInterface : MonoBehaviour
 
     private const string Done = "done";
 
+    private const string ExceptionURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/report-exception";
+
+    private const string BrickSubmitURL = "https://us-east1-bricksvr-unity.cloudfunctions.net/brick-submit2";
+
+    private const string RemoveBricksURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/remove-bricks";
+
+    private const string SetLockedURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/set-locked";
+
+    private const string CreateRoomURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/create-room";
+
+    private const string StartExportURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/begin-export";
+
+    private const string RoomInfoURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/room-info";
+
+    private const string SetNicknameURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/setnickname";
+
+    private const string IsVersionSupportedURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/versionsupported";
+
     public static BrickServerInterface GetInstance()
     {
         if (_instance == null) _instance = GameObject.FindWithTag(BrickServerInterfaceTag).GetComponent<BrickServerInterface>();
@@ -73,6 +91,7 @@ public class BrickServerInterface : MonoBehaviour
         _instance.StartCoroutine(SetNicknameIEnum(nickname));
     }
 
+    //REIMPLEMENT LATER
     public IEnumerator SendException(string condition, string stacktrace, LogType type)
     {
         WWWForm form = new WWWForm();
@@ -92,14 +111,13 @@ public class BrickServerInterface : MonoBehaviour
         request.timeout = 20;
 
         yield return request.SendWebRequest();
-
         // Debug.Log("Reported exception. Response:");
         // Debug.Log(request.downloadHandler.text);
     }
 
     private IEnumerator SendBrickIEnum(NormcoreRPC.Brick brick, Realtime realtime)
     {
-        WWWForm form = new WWWForm();
+         WWWForm form = new WWWForm();
 
         yield return null; // Wait a frame, the frame where we attach a brick is already a busy frame.
 

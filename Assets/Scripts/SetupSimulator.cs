@@ -11,7 +11,7 @@ public class SetupSimulator : MonoBehaviour
     {
         if (Application.isEditor)
         {
-            vrController.GetComponent<VRSimulator>().enabled = true;
+            //vrController.GetComponent<VRSimulator>().enabled = true; MISSING?
         }
     }
 }

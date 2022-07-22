@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-using UnityEngine.UI.ProceduralImage;
+//using UnityEngine.UI.ProceduralImage; PRO ASSET
 
 public class ColorCarousel : MonoBehaviour
 {
-    public ProceduralImage colorImage;
+    //public ProceduralImage colorImage; PRO ASSET
+    public Color color;
     public Color[] colors;
     private int[] colorInts;
     private bool colorIntsInitialized;
@@ -80,7 +81,7 @@ public class ColorCarousel : MonoBehaviour
 
     private void ReRenderColor()
     {
-        colorImage.color = colors[_currentColorIndex];
+        color = colors[_currentColorIndex];
     }
 
     private void OnValidate()
@@ -90,6 +91,6 @@ public class ColorCarousel : MonoBehaviour
 
         editorColorIndex = Mathf.Clamp(editorColorIndex, 0, colors.Length - 1);
 
-        colorImage.color = colors[editorColorIndex];
+        color = colors[editorColorIndex];
     }
 }

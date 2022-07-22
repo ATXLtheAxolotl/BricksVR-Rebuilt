@@ -62,7 +62,7 @@ public static class DecorateMenuEnv
             GameObject.DestroyImmediate(newBrick.GetComponent<RealtimeView>());
             GameObject.DestroyImmediate(newBrick.GetComponent<BrickAttach>());
             GameObject.DestroyImmediate(newBrick.GetComponent<BuildingBrickSync>());
-            GameObject.DestroyImmediate(newBrick.GetComponent<Outline>());
+            //GameObject.DestroyImmediate(newBrick.GetComponent<Outline>()); Missing script?
             GameObject.DestroyImmediate(newBrick.GetComponent<BrickUuid>());
             GameObject.DestroyImmediate(newBrick.GetComponent<XRGrabInteractable>());
             GameObject.DestroyImmediate(newBrick.GetComponent<BrickSounds>());
