@@ -22,7 +22,7 @@ public class EntitlementCheckManager : MonoBehaviour
     private float _timeEntitlementStarted;
 
     private const float EntitlementTimeout = 8f;
-    private const bool KillAppOnEntitlementFailure = true;
+    private const bool KillAppOnEntitlementFailure = false;
 
     private static EntitlementCheckManager _instance;
 
