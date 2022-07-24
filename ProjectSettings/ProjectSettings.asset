@@ -813,10 +813,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: REDACTED
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: BricksVR
-  organizationId: REDACTED
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
