@@ -25,6 +25,7 @@ public class MusicPlayer : MonoBehaviour
 
     public void OnMusicToggle(bool musicSettingEnabled)
     {
+        if(Application.isEditor) return;
         if (musicSettingEnabled)
         {
             if(!_source.isPlaying) _source.Play();
