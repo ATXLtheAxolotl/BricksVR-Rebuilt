@@ -34,6 +34,7 @@ public class UserSettings : MonoBehaviour
     public SerializableIntEvent AvatarMouthUpdated;
     public SerializableIntEvent AvatarEyesUpdated;
     public SerializableIntEvent BrickShininessUpdated;
+    public SerializableIntEvent MenuSceneUpdated;
 
     public SerializableStringEvent NicknameUpdated;
 
@@ -84,6 +85,7 @@ public class UserSettings : MonoBehaviour
         if (!PlayerPrefs.HasKey(AvatarMouthKey))                    PlayerPrefs.SetInt(AvatarMouthKey, 1);
         if (!PlayerPrefs.HasKey(AvatarEyesKey))                     PlayerPrefs.SetInt(AvatarEyesKey, 1);
         if (!PlayerPrefs.HasKey(BrickShininessKey))                 PlayerPrefs.SetInt(BrickShininessKey, 5);
+        if (!PlayerPrefs.HasKey(BrickShininessKey))                 PlayerPrefs.SetInt(MainMenuSceneKey, 1);
     }
 
     private void SendInitialEvents()
@@ -110,7 +112,7 @@ public class UserSettings : MonoBehaviour
         AvatarMouthUpdated?.Invoke(PlayerPrefs.GetInt(AvatarMouthKey));
         AvatarEyesUpdated?.Invoke(PlayerPrefs.GetInt(AvatarEyesKey));
         BrickShininessUpdated?.Invoke(PlayerPrefs.GetInt(BrickShininessKey));
-
+        MenuSceneUpdated?.Invoke(PlayerPrefs.GetInt(MainMenuSceneKey));
     }
 
     private void SendNicknameToServerOnLoad()
@@ -377,6 +379,23 @@ public class UserSettings : MonoBehaviour
     public float BrickShininessF
     {
         set => BrickShininess = (int) value;
+
+    }
+
+    private const string MainMenuSceneKey = "brick_shininess";
+    public int MainMenuScene
+    {
+        get => PlayerPrefs.GetInt(MainMenuSceneKey);
+        set
+        {
+            PlayerPrefs.SetInt(MainMenuSceneKey, value);
+            BrickShininessUpdated?.Invoke(value);
+        }
+    }
+
+    public float MainMenuSceneF
+    {
+        set => MainMenuScene = (int) value;
 
     }
 }

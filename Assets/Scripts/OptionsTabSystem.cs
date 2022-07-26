@@ -19,7 +19,11 @@ public class OptionsTabSystem : MonoBehaviour
 
     public void SelectTab(int index)
     {
-        DisableTab(_selectedTab);
+        //Loop over in-case multiple tabs are open.
+        for(var i = 0; i < tabs.Length; i++) {
+            DisableTab(i);
+        }
+
         EnableTab(index);
 
         _selectedTab = index;
