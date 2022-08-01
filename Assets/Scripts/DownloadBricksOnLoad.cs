@@ -45,15 +45,16 @@ public class DownloadBricksOnLoad : MonoBehaviour
         connectivityError = false;
     }
 
-    public void StartLoading(string roomName, TextMeshProUGUI joiningStatusText)
+    public void StartLoading(string roomName, NewCodeJoin joiningStatusText)
     {
-        _joiningStatusText = joiningStatusText;
+        joiningStatusText.displayTitle.text = "Status:";
+        _joiningStatusText = joiningStatusText.displayMessage;
         StartCoroutine(LoadBrickDataAsync(roomName));
     }
 
     private IEnumerator LoadBrickDataAsync(string roomName)
     {
-        _joiningStatusText.text = $"Status: Fetching bricks from database...";
+        _joiningStatusText.text = "Fetching bricks from database...";
         yield return DownloadBrickData(roomName);
 
         if (Errored)

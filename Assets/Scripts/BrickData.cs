@@ -76,7 +76,7 @@ public static class BrickData
 
         //Slope_1x1x2-3_Complete
         // new Brick("1x1_4FaceSideStud", "1x1 (4 side studs)", "side_studs", "SideStudBricks/Brick_1x1_4FaceSideStud/Brick_1x1_4FaceSideStud_Complete"),
-        // new Brick("Bob", "Bob", "bricks", "Misc/Bob"),
+        new Brick("Bob", "Bob", "bricks", "Misc/Bob", 0.3f, new Vector3(0, 0, 180f)),
     };
 
     public static List<Brick> AllBricks()

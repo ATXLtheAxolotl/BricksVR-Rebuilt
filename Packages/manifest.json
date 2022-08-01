@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "com.normalvr.normcore": "2.2.3",
+    "com.normalvr.normcore": "2.3.0",
+    "com.unity.2d.spriteshape": "3.0.18",
     "com.unity.ide.rider": "1.2.1",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.test-framework": "1.1.33",

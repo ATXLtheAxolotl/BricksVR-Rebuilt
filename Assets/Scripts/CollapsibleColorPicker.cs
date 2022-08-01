@@ -54,6 +54,10 @@ public class CollapsibleColorPicker : MonoBehaviour
         _collapseButtonOriginalRot = collapseButton.localEulerAngles;
     }
 
+    private void Start() {
+        Toggle();
+    }
+
     private void Update()
     {
         if (IsAnimating)

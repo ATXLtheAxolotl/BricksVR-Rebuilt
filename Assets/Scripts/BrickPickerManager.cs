@@ -91,7 +91,7 @@ public class BrickPickerManager : MonoBehaviour
         _activeColorPickerSaveSpot.Enable();
 
         EnableTab(_currentTab);
-
+    
         SetColor(_activeColorPickerSaveSpot.GetColor());
 
         fade.BeginShrink();
@@ -181,6 +181,10 @@ public class BrickPickerManager : MonoBehaviour
         {
             brickPickerBrick.SetColor(color);
         }
+    }
+
+    public Color GetColor() {
+        return _activeColorPickerSaveSpot.GetColor();
     }
 
     public void SaveSpotSelected(ColorPickerSaveSpot saveSpot)

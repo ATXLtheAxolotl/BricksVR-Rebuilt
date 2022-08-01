@@ -11,10 +11,14 @@ public class TouchButton : MonoBehaviour
     private bool _isPressed;
     private int _numberOfObjectsPressing;
     private Button _button;
+    [SerializeField]
+    private CollapsibleColorPicker colorPicker;
 
     private void Start()
     {
         _button = GetComponent<Button>();
+        colorPicker.Toggle();
+        
     }
 
     private void OnTriggerEnter(Collider other)

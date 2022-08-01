@@ -129,7 +129,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.2.40
+  bundleVersion: 0.2.50
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -173,9 +173,11 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.BricksVR.BricksVR
-  buildNumber: {}
-  AndroidBundleVersionCode: 38
+    Android: com.BricksVR.Reforged
+    Standalone: com.BricksVR.Reforged
+  buildNumber:
+    Standalone: 39
+  AndroidBundleVersionCode: 39
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
