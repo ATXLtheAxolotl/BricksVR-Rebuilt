@@ -1,4 +1,4 @@
-# BricksVR Reforged
+# BricksVR Rebuilt
 
 This purpose of this project is the continue developing a game named [BricksVR](https://github.com/d12/bricksvr-game).
 
