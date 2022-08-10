@@ -7,13 +7,10 @@ using UnityEngine.UI;
 
 public class EnableRoomMenuForOwner : MonoBehaviour
 {
-    public Toggle lockRoomToggle;
-    public Toggle lowGravityToggle;
-    public Toggle movingThroughBricksAllowedToggle;
+    public List<Button> buttons;
     public RoomOwnershipSync ownershipSync;
     public TextMeshProUGUI menuSubtitle;
 
-    private const string OwnerText = "You are the room owner, so you can make changes.";
     private const string NotOwnerText = "Only the room owner can change these settings.";
 
     void OnEnable()
@@ -23,17 +20,12 @@ public class EnableRoomMenuForOwner : MonoBehaviour
             if (gameObject.activeSelf)
             {
                 bool isOwner = ownershipSync.IsRoomOwner();
+                
+                foreach(Button button in buttons) {
+                    button.interactable = isOwner;
+                }
 
-                lockRoomToggle.interactable = isOwner;
-                lockRoomToggle.SetIsOnWithoutNotify(ownershipSync.Locked());
-
-                lowGravityToggle.interactable = isOwner;
-                lowGravityToggle.SetIsOnWithoutNotify(ownershipSync.LowGravity());
-
-                movingThroughBricksAllowedToggle.interactable = isOwner;
-                movingThroughBricksAllowedToggle.SetIsOnWithoutNotify(ownershipSync.BlockedFromMovingThroughBricks());
-
-                menuSubtitle.text = isOwner ? OwnerText : NotOwnerText;
+                menuSubtitle.text = isOwner ? "" : NotOwnerText;
             }
         }
         catch (NullReferenceException)

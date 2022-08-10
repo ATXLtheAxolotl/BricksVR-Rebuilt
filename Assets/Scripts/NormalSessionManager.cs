@@ -17,6 +17,7 @@ using Random = UnityEngine.Random;
 
 public class NormalSessionManager : MonoBehaviour
 {
+    private static NormalSessionManager _instance;
     public GameObject realtimeGameobject;
     private RealtimeAvatarManager _avatarManager;
     public GameObject playerControllers;
@@ -59,6 +60,8 @@ public class NormalSessionManager : MonoBehaviour
     private BrickStore _brickStore;
 
     public TextMeshProUGUI menuRoomCode;
+
+    public TextMeshProUGUI menuRoomPlayers;
 
     public UserSettings userSettings;
 
@@ -142,6 +145,12 @@ public class NormalSessionManager : MonoBehaviour
 
     [SerializeField]
     private NewCodeJoin newCodeJoin;
+
+    public static NormalSessionManager GetInstance()
+    {
+        if (!_instance) _instance = FindObjectOfType<NormalSessionManager>();
+        return _instance;
+    }
 
     private IEnumerator Start()
     {
@@ -309,8 +318,9 @@ public class NormalSessionManager : MonoBehaviour
         _loading = true;
 
         _brickStore.ClearAndRemoveFromWorld();
-
-        menuRoomCodeDisplay.text = FormatRoomNameAnyLenNoMono(_roomName);
+        
+        menuRoomCodeDisplay.text = $"Room Code: {_roomName}";
+        menuRoomPlayers.text = $"Players: {_avatarManager.avatars.Count}";
 
         CoroutineWithData isVersionSupported =
             new CoroutineWithData(this, BrickServerInterface.GetInstance().GetIsVersionSupported());
@@ -495,7 +505,8 @@ public class NormalSessionManager : MonoBehaviour
         }
         else
         {
-            menuRoomCode.text = FormatRoomName(_roomName);
+            menuRoomCode.text = $"Room Code: {_roomName}";
+            menuRoomPlayers.text = $"Players: {_avatarManager.avatars.Count}";
         }
     }
 

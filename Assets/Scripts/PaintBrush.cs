@@ -10,6 +10,7 @@ public class PaintBrush : MonoBehaviour
     {
         if(mainCollision.gameObject.tag != "Lego") return;
         mainCollision.gameObject.GetComponent<RealtimeTransform>().RequestOwnership();
-        mainCollision.gameObject.GetComponent<BrickAttach>().Color = pickerManager.GetColor(); 
+        mainCollision.gameObject.GetComponent<BrickAttach>().Color = pickerManager.GetColor();
+        Debug.Log(mainCollision.gameObject.name);
     }
 }

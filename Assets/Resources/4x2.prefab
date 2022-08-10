@@ -842,7 +842,8 @@ MonoBehaviour:
   _viewUUID: 
   _sceneViewPreventOwnershipTakeover: 0
   _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
-  _isRootPrefabView: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
   _components:
   - componentID: 3
     component: {fileID: 4151465509082303415}
@@ -945,6 +946,7 @@ MonoBehaviour:
   renderHollowMesh: 1
   isPlayerHead: 0
   headClientId: -1
+  texOffset: 0
 --- !u!114 &2408561443513528418
 MonoBehaviour:
   m_ObjectHideFlags: 0
