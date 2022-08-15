@@ -160,7 +160,7 @@ public class DownloadBricksOnLoad : MonoBehaviour
 
     private IEnumerator DownloadBrickData(string room)
     {
-        UnityWebRequest request = UnityWebRequest.Get($"https://us-central1-bricksvr-unity.cloudfunctions.net/fetch-bricks?room={room}&userid={UserId.Get()}");
+        UnityWebRequest request = UnityWebRequest.Get($"http://localhost:3000/rooms/bricks/{room}");
         request.timeout = 45;
 
         yield return request.SendWebRequest();

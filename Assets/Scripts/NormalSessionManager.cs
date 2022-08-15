@@ -344,7 +344,8 @@ public class NormalSessionManager : MonoBehaviour
 
         RoomInfoResponse response = (RoomInfoResponse) cd.result;
         roomNameLabel.text = RoomDisplayName.DisplayNameForRoomName(response.name);
-
+        
+        
         if (!response.Exists)
         {
             Debug.LogError("Room doesn't exist!");
@@ -669,7 +670,7 @@ public class NormalSessionManager : MonoBehaviour
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 
-    private void DisableAllMenus()
+    public void DisableAllMenus()
     {
         mainPage.SetActive(false);
         joinByCodePage.SetActive(false);

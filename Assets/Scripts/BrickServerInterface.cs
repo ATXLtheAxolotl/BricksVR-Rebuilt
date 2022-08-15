@@ -58,7 +58,7 @@ public class BrickServerInterface : MonoBehaviour
 
     private const string StartExportURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/begin-export";
 
-    private const string RoomInfoURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/room-info";
+    private const string RoomInfoURL = "http://localhost:3000/rooms";
 
     private const string SetNicknameURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/setnickname";
 
@@ -286,13 +286,12 @@ public class BrickServerInterface : MonoBehaviour
     public IEnumerator RoomInfo(string normcoreRoomName)
     {
         WWWForm form = new WWWForm();
-        form.AddField(RoomKey, normcoreRoomName);
 
-        UnityWebRequest request = UnityWebRequest.Post(RoomInfoURL, form);
+        UnityWebRequest request = UnityWebRequest.Get(RoomInfoURL + $"/{normcoreRoomName}");
         request.timeout = 15;
 
         yield return request.SendWebRequest();
-
+        Debug.Log(request.downloadHandler.text);
         RoomInfoResponse response = JsonUtility.FromJson<RoomInfoResponse>(request.downloadHandler.text) ??
                                     new RoomInfoResponse();
 
