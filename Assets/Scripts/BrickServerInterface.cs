@@ -54,7 +54,7 @@ public class BrickServerInterface : MonoBehaviour
 
     private const string SetLockedURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/set-locked";
 
-    private const string CreateRoomURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/create-room";
+    private const string CreateRoomURL = "http://localhost:3000/rooms/create";
 
     private const string StartExportURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/begin-export";
 
@@ -237,10 +237,9 @@ public class BrickServerInterface : MonoBehaviour
         form.AddField(MinorVersionKey, ReleaseVersion.MinorString());
 
         UnityWebRequest request = UnityWebRequest.Post(CreateRoomURL, form);
-        request.timeout = 15;
+        request.timeout = 100;
 
         yield return request.SendWebRequest();
-
 
         CreateRoomResponse response = JsonUtility.FromJson<CreateRoomResponse>(request.downloadHandler.text);
         if (response == null)
@@ -291,7 +290,7 @@ public class BrickServerInterface : MonoBehaviour
         request.timeout = 15;
 
         yield return request.SendWebRequest();
-        Debug.Log(request.downloadHandler.text);
+        
         RoomInfoResponse response = JsonUtility.FromJson<RoomInfoResponse>(request.downloadHandler.text) ??
                                     new RoomInfoResponse();
 

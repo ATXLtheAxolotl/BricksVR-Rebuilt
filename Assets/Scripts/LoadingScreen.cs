@@ -8,13 +8,13 @@ using UnityEngine.UI;
 public class LoadingScreen : MonoBehaviour
 {
     public NormalSessionManager normalSessionManager;
-    public TextMeshProUGUI loadingText;
+    public MessageManager messageManager;
     public GameObject backButton;
     public RoomCodeScreen roomCodeScreen;
 
     private Coroutine _createRoomCoroutine;
 
-    public const string NetworkErrorText = "Error: Could not connect to the BricksVR server, are you connected to the internet?";
+    public const string NetworkErrorText = "Could not connect to the BricksVR server, are you connected to the internet?";
 
     public void CreateRoom(string roomName)
     {
@@ -26,7 +26,7 @@ public class LoadingScreen : MonoBehaviour
 
     private IEnumerator CreateRoomIEnum(string roomName)
     {
-        loadingText.text = "Status: Creating room...";
+        messageManager.DisplayMessage("Status:", "Creating room...");
         CoroutineWithData isVersionSupported =
             new CoroutineWithData(this, BrickServerInterface.GetInstance().GetIsVersionSupported());
         yield return isVersionSupported.coroutine;
@@ -35,7 +35,7 @@ public class LoadingScreen : MonoBehaviour
 
         if (versionSupportedResponse == null || !versionSupportedResponse.supported)
         {
-            loadingText.text = versionSupportedResponse == null ? NetworkErrorText : "Error: Your game is out of date! Please update on Steam or the Oculus store.";
+            messageManager.DisplayMessage("Error:", versionSupportedResponse == null ? NetworkErrorText : "Your game is out of date! Please update on Applab or the Github.");
             backButton.SetActive(true);
             _createRoomCoroutine = null;
             yield break;
@@ -47,14 +47,13 @@ public class LoadingScreen : MonoBehaviour
         CreateRoomResponse response = (CreateRoomResponse) cd.result;
         if (response.connectivityError || response.upstreamError)
         {
-            loadingText.text = response.upstreamError
+            messageManager.DisplayMessage("Error:", response.upstreamError
                 ? NormalSessionManager.UpstreamErrorText
-                : NormalSessionManager.NetworkErrorText;
-            backButton.SetActive(true);
+                : NormalSessionManager.NetworkErrorText, true);
         } else if (!string.IsNullOrEmpty(response.error))
         {
-            loadingText.text = $"Upstream error: {response.error}";
-            backButton.SetActive(true);
+            Debug.Log(response.error);
+            messageManager.DisplayMessage("Upstream Errror:", response.error, true);
         }
         else
         {

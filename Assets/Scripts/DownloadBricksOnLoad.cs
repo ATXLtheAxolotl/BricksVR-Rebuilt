@@ -45,7 +45,7 @@ public class DownloadBricksOnLoad : MonoBehaviour
         connectivityError = false;
     }
 
-    public void StartLoading(string roomName, NewCodeJoin joiningStatusText)
+    public void StartLoading(string roomName, MessageManager joiningStatusText)
     {
         joiningStatusText.displayTitle.text = "Status:";
         _joiningStatusText = joiningStatusText.displayMessage;

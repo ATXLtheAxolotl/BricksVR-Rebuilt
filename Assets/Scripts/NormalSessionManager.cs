@@ -137,14 +137,14 @@ public class NormalSessionManager : MonoBehaviour
     public GameObject tutorialEnvironment;
     public TextMeshProUGUI roomNameLabel;
 
-    public const string UpstreamErrorText = "Error: Received an error status from the BricksVR datastore.\n\nPlease join the Discord at https://bricksvr.com/discord or wait a few minutes.";
-    public const string NetworkErrorText = "Error: Could not connect to the BricksVR server, are you connected to the internet?";
+    public const string UpstreamErrorText = "Received an error status from the BricksVR datastore.\n\nPlease join the Discord at https://bricksvr.com/discord or wait a few minutes.";
+    public const string NetworkErrorText = "Could not connect to the BricksVR server, are you connected to the internet?";
 
     public MovementVignette movementVignette;
     public AdjustPlayerScale adjustPlayerScale;
 
     [SerializeField]
-    private NewCodeJoin newCodeJoin;
+    private MessageManager messageManager;
 
     public static NormalSessionManager GetInstance()
     {
@@ -305,11 +305,11 @@ public class NormalSessionManager : MonoBehaviour
         joiningBackButton.SetActive(false);
         loadingPage.SetActive(true);
         
-        newCodeJoin.DisplayMessage("Status:", "Establishing connection...");
+        messageManager.DisplayMessage("Status:", "Establishing connection...");
 
         if (_roomName.Length != 6 && _roomName.Length != 8)
         {
-            newCodeJoin.DisplayMessage("Error:", "Room not found. Enter a valid room code or create a new room.", true);
+            messageManager.DisplayMessage("Error:", "Room not found. Enter a valid room code or create a new room.", true);
             joiningBackButton.SetActive(true);
             _joiningCoroutine = null;
             yield break;
@@ -330,13 +330,13 @@ public class NormalSessionManager : MonoBehaviour
 
         if (versionSupportedResponse == null || !versionSupportedResponse.supported)
         {
-            newCodeJoin.DisplayMessage("Error:", versionSupportedResponse == null ? NetworkErrorText : "Your game is out of date! Please update on Steam or the Oculus store.", true);
+            messageManager.DisplayMessage("Error:", versionSupportedResponse == null ? NetworkErrorText : "Your game is out of date! Please update on Steam or the Oculus store.", true);
             joiningBackButton.SetActive(true);
             _joiningCoroutine = null;
             yield break;
         }
 
-        newCodeJoin.DisplayMessage("Status:", "Fetching room metadata...");
+        messageManager.DisplayMessage("Status:", "Fetching room metadata...");
 
         CoroutineWithData cd =
             new CoroutineWithData(this, BrickServerInterface.GetInstance().RoomInfo(_roomPrefix + _roomName));
@@ -350,7 +350,7 @@ public class NormalSessionManager : MonoBehaviour
         {
             Debug.LogError("Room doesn't exist!");
 
-            newCodeJoin.DisplayMessage("Error:", "Room not found. Enter a valid room code or create a new room.", true);
+            messageManager.DisplayMessage("Error:", "Room not found. Enter a valid room code or create a new room.", true);
             joiningBackButton.SetActive(true);
             _joiningCoroutine = null;
             yield break;
@@ -373,7 +373,7 @@ public class NormalSessionManager : MonoBehaviour
         menuLeftHand.SetActive(false);
         menuRightHand.SetActive(false);
 
-        newCodeJoin.DisplayMessage("Status:", "Joining room...");
+        messageManager.DisplayMessage("Status:", "Joining room...");
 
         _ambientMusicMaxVolume = ambientMusic.volume;
 
@@ -458,11 +458,11 @@ public class NormalSessionManager : MonoBehaviour
     {
         if (downloadBricksOnLoad.upstreamError)
         {
-            newCodeJoin.DisplayMessage("Error:", UpstreamErrorText, true);
+            messageManager.DisplayMessage("Error:", UpstreamErrorText, true);
         }
         else
         {
-            newCodeJoin.DisplayMessage("Error:", NetworkErrorText, true);
+            messageManager.DisplayMessage("Error:", NetworkErrorText, true);
         }
 
         joiningBackButton.SetActive(true);
@@ -569,7 +569,7 @@ public class NormalSessionManager : MonoBehaviour
 
     private IEnumerator DownloadBricksFromDatastore()
     {
-        downloadBricksOnLoad.StartLoading(_roomPrefix + _roomName, newCodeJoin);
+        downloadBricksOnLoad.StartLoading(_roomPrefix + _roomName, messageManager);
 
         // TODO: Make it so we can't get stuck here if something goes wrong.
         yield return new WaitUntil(() => downloadBricksOnLoad.isDoneDownloading);
