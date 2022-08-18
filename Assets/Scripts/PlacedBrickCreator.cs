@@ -65,7 +65,6 @@ public static class PlacedBrickCreator
 
         if(recalculateMesh)
             newBrickAttach.NotifyNearbyBricksToRecalculateMesh();
-
         return brickObject;
     }
 }

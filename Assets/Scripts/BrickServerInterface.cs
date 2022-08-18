@@ -16,6 +16,7 @@ public class BrickServerInterface : MonoBehaviour
     private int _failedBricks = 0;
 
     // String keys for web reqeusts, allocate these ahead of time so we don't have slow first web requests
+    private const string FriendsKey = "";
     private const string BrickServerInterfaceTag = "SendBrickToServer";
     private const string EditorExceptionSuffix = "-editor";
     private const string NullString = "null";
@@ -48,9 +49,9 @@ public class BrickServerInterface : MonoBehaviour
 
     private const string ExceptionURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/report-exception";
 
-    private const string BrickSubmitURL = "https://us-east1-bricksvr-unity.cloudfunctions.net/brick-submit2";
+    private const string BrickSubmitURL = "http://localhost:3000/bricks";
 
-    private const string RemoveBricksURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/remove-bricks";
+    private const string RemoveBricksURL = "http://localhost:3000/bricks/remove";
 
     private const string SetLockedURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/set-locked";
 
@@ -62,7 +63,15 @@ public class BrickServerInterface : MonoBehaviour
 
     private const string SetNicknameURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/setnickname";
 
-    private const string IsVersionSupportedURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/versionsupported";
+    private const string IsVersionSupportedURL = "http://localhost:3000/version";
+
+    
+
+    private const string FriendsInfoList = "http://localhost:3000/friends/info";
+
+    private const string PersonalFriendInfo = "";
+
+    private const string VisitFriend = "";
 
     public static BrickServerInterface GetInstance()
     {
@@ -329,9 +338,34 @@ public class BrickServerInterface : MonoBehaviour
         yield return request.SendWebRequest();
 
         string response = request.downloadHandler.text;
-
         yield return JsonUtility.FromJson<IsVersionSupportedResponse>(request.downloadHandler.text);
     }
+
+    public IEnumerator GetFriends() {
+        WWWForm form = new WWWForm();
+
+        form.AddField(FriendsKey, UserSettings.GetInstance().FriendCodes);
+
+        UnityWebRequest request = UnityWebRequest.Post(FriendsInfoList, form);
+        request.timeout = 15;
+
+        yield return request.SendWebRequest();
+
+        string response = request.downloadHandler.text;
+        yield return JsonUtility.FromJson<FriendsInfoResponse>(request.downloadHandler.text);
+    }
+}
+
+[SerializeField]
+public class FriendsInfoResponse {
+    Friend[] friends;
+}
+
+public class Friend {
+    bool online;
+    bool canVisit;
+    string location;
+    string nickname;
 }
 
 [Serializable]

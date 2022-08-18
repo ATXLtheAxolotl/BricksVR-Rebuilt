@@ -37,6 +37,8 @@ public class UserSettings : MonoBehaviour
     public SerializableIntEvent MenuSceneUpdated;
 
     public SerializableStringEvent NicknameUpdated;
+    public SerializableStringEvent PersonalFriendCodeUpdated;
+    public SerializableStringEvent FriendCodesUpdated;
 
     [System.Serializable]
     public class SerializableBoolEvent : UnityEvent<bool> { }
@@ -85,7 +87,9 @@ public class UserSettings : MonoBehaviour
         if (!PlayerPrefs.HasKey(AvatarMouthKey))                    PlayerPrefs.SetInt(AvatarMouthKey, 1);
         if (!PlayerPrefs.HasKey(AvatarEyesKey))                     PlayerPrefs.SetInt(AvatarEyesKey, 1);
         if (!PlayerPrefs.HasKey(BrickShininessKey))                 PlayerPrefs.SetInt(BrickShininessKey, 5);
-        if (!PlayerPrefs.HasKey(BrickShininessKey))                 PlayerPrefs.SetInt(MainMenuSceneKey, 1);
+        if (!PlayerPrefs.HasKey(MainMenuSceneKey))                  PlayerPrefs.SetInt(MainMenuSceneKey, 1);
+        if (!PlayerPrefs.HasKey(PersonalFriendCodeKey))             PlayerPrefs.SetString(PersonalFriendCodeKey, "");
+        if (!PlayerPrefs.HasKey(FriendCodesKey))                    PlayerPrefs.SetString(FriendCodesKey, "");
     }
 
     private void SendInitialEvents()
@@ -397,5 +401,25 @@ public class UserSettings : MonoBehaviour
     {
         set => MainMenuScene = (int) value;
 
+    }
+
+    private const string PersonalFriendCodeKey = "friend_code";
+    public string PersonalFriendCode
+    {
+        get => PlayerPrefs.GetString(PersonalFriendCodeKey);
+        set
+        {
+            PlayerPrefs.SetString(PersonalFriendCodeKey, value);
+        }
+    }
+
+    private const string FriendCodesKey = "friend_codes";
+    public string FriendCodes
+    {
+        get => PlayerPrefs.GetString(FriendCodesKey);
+        set
+        {
+            PlayerPrefs.SetString(FriendCodesKey, value);
+        }
     }
 }

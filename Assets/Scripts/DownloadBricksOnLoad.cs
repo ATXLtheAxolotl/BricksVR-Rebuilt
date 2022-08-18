@@ -72,6 +72,7 @@ public class DownloadBricksOnLoad : MonoBehaviour
         {
             try
             {
+                Debug.Log(_roomDataJson);
                 if (parsedResponse.bricks[i].usingHeadStuff && (parsedResponse.bricks[i].headClientId != -1))
                 {
                     bricksParentedToHeads.Add(parsedResponse.bricks[i]);
