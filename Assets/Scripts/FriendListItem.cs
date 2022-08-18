@@ -12,11 +12,22 @@ public class FriendListItem : MonoBehaviour
     public Button followButton;
     public string friendCode;
 
-    private SyncVoiceWithSettings _syncVoiceWithSettings;
+    public Friend friendInfo;
+
+    public void Initialize(Friend data) {
+        friendInfo = data;
+        nameText.text = data.nickname;
+        
+        if(data.online && data.canVisit && data.location != null) {
+            locationText.text = data.location;
+            followButton.interactable = true;
+        }
+        else followButton.interactable = false;
+    }
 
     public void FollowButtonPressed()
     {
-        //BrickServerInterface.GetFriendLocation(friendCode);
+        //BrickServerInterface.FollowFriend(friendCode);
         
     }
 }

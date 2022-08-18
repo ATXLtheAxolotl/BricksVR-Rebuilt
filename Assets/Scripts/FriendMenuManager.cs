@@ -27,20 +27,20 @@ public class FriendMenuManager : MonoBehaviour
         RebuildUI();
     }
 
-    private void RebuildUI()
+    public IEnumerator<Coroutine> RebuildUI()
     {
+        CoroutineWithData friends =
+            new CoroutineWithData(this, BrickServerInterface.GetInstance().GetFriendsIEnum());
+        yield return friends.coroutine;
+
         foreach (Transform t in _listParentTransform)
             Destroy(t.gameObject);
 
-        foreach (FriendDataResponse data in BrickServerInterface.GetInstance())
+        foreach (Friend data in friends.result as Friend[])
         {
             GameObject newPlayerEntry = Instantiate(friendEntryPrefab, _listParentTransform);
-            FriendListItem playerListItem = newPlayerEntry.GetComponent<FriendListItem>();
-            playerListItem.Initialize(data);
+            FriendListItem friendListItem = newPlayerEntry.GetComponent<FriendListItem>();
+            friendListItem.Initialize(data);
         }
     }
-}
-
-public class FriendDataResponse {
-
 }

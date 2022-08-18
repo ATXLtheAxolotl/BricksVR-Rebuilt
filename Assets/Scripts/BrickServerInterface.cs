@@ -341,7 +341,7 @@ public class BrickServerInterface : MonoBehaviour
         yield return JsonUtility.FromJson<IsVersionSupportedResponse>(request.downloadHandler.text);
     }
 
-    public IEnumerator GetFriends() {
+    public IEnumerator GetFriendsIEnum() {
         WWWForm form = new WWWForm();
 
         form.AddField(FriendsKey, UserSettings.GetInstance().FriendCodes);
@@ -352,20 +352,16 @@ public class BrickServerInterface : MonoBehaviour
         yield return request.SendWebRequest();
 
         string response = request.downloadHandler.text;
-        yield return JsonUtility.FromJson<FriendsInfoResponse>(request.downloadHandler.text);
+        yield return JsonUtility.FromJson<Friend[]>(request.downloadHandler.text);
     }
 }
 
 [SerializeField]
-public class FriendsInfoResponse {
-    Friend[] friends;
-}
-
 public class Friend {
-    bool online;
-    bool canVisit;
-    string location;
-    string nickname;
+    public bool online;
+    public bool canVisit;
+    public string location;
+    public string nickname;
 }
 
 [Serializable]
