@@ -42,6 +42,7 @@ public class BrickServerInterface : MonoBehaviour
     private const string RotYKey = "roty";
     private const string RotZKey = "rotz";
     private const string RotWKey = "rotw";
+    private const string VisitFriendKey = "code";
 
     private const string TimestampKey = "timestamp";
 
@@ -63,15 +64,25 @@ public class BrickServerInterface : MonoBehaviour
 
     private const string SetNicknameURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/setnickname";
 
+    private const string FriendOnlineStatus = "http://localhost:3000/friends/online";
+
+
     private const string IsVersionSupportedURL = "http://localhost:3000/version";
 
     
 
     private const string FriendsInfoList = "http://localhost:3000/friends/info";
 
-    private const string PersonalFriendInfo = "";
 
     private const string VisitFriend = "";
+
+    [RuntimeInitializeOnLoadMethod]
+    static IEnumerator OnRuntimeMethodLoad() {
+        while (true) {
+            GetInstance().SendOnlineStatus();
+            yield return new WaitForSeconds(5);
+        }
+    }
 
     public static BrickServerInterface GetInstance()
     {
@@ -353,6 +364,32 @@ public class BrickServerInterface : MonoBehaviour
 
         string response = request.downloadHandler.text;
         yield return JsonUtility.FromJson<Friend[]>(request.downloadHandler.text);
+    }
+
+    public IEnumerator FollowFriend(string code) {
+        WWWForm form = new WWWForm();
+
+        form.AddField(VisitFriendKey, code);
+
+        UnityWebRequest request = UnityWebRequest.Post(VisitFriend, form);
+        request.timeout = 15;
+
+        yield return request.SendWebRequest();
+
+        string response = request.downloadHandler.text;
+        NormalSessionManager.GetInstance().JoinRoomWrapper(response);
+        yield return response;
+    }
+
+    public IEnumerator SendOnlineStatus() {
+        WWWForm form = new WWWForm();
+
+        form.AddField("code", UserSettings.GetInstance().PersonalFriendCode);
+
+        UnityWebRequest request = UnityWebRequest.Post(FriendOnlineStatus, form);
+        request.timeout = 15;
+
+        yield return request.SendWebRequest();
     }
 }
 

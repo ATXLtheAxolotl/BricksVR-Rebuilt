@@ -6,7 +6,7 @@ public class FriendMenuManager : MonoBehaviour
 {
     public GameObject friendEntryPrefab;
 
-    public List<string> friendCodes = new List<string>();
+    public string[] friendCodes = UserSettings.GetInstance().FriendCodes.Split(char.Parse(";"));
 
     public GameObject listParent;
     private Transform _listParentTransform;
@@ -25,6 +25,9 @@ public class FriendMenuManager : MonoBehaviour
     private void RefreshPlayerList()
     {
         RebuildUI();
+        foreach(string code in friendCodes) {
+            Instantiate(friendEntryPrefab, _listParentTransform);
+        }
     }
 
     public IEnumerator<Coroutine> RebuildUI()

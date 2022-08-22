@@ -27,7 +27,6 @@ public class FriendListItem : MonoBehaviour
 
     public void FollowButtonPressed()
     {
-        //BrickServerInterface.FollowFriend(friendCode);
-        
+        BrickServerInterface.GetInstance().FollowFriend(friendCode);    
     }
 }

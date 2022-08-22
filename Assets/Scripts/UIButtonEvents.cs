@@ -11,6 +11,7 @@ public class UIButtonEvents : MonoBehaviour
 {
     public Color textBaseColor;
     public Color textHoveredColor;
+
     public Color textSelectedColor;
 
     [FormerlySerializedAs("iconBaseColor")] public Color imageBaseColor;
@@ -53,6 +54,12 @@ public class UIButtonEvents : MonoBehaviour
 
     private void Update()
     {
+        if(!_button.interactable) {
+            image.color = _button.colors.disabledColor;
+            text.color = _button.colors.disabledColor;
+            return;
+        }
+
         if (_selected)
             return;
 
