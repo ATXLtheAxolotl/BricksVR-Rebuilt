@@ -50,28 +50,28 @@ public class BrickServerInterface : MonoBehaviour
 
     private const string ExceptionURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/report-exception";
 
-    private const string BrickSubmitURL = "http://localhost:3000/bricks";
+    private const string BrickSubmitURL = "https://BricksVR-Server.iceballcentral.repl.co/bricks";
 
-    private const string RemoveBricksURL = "http://localhost:3000/bricks/remove";
+    private const string RemoveBricksURL = "https://BricksVR-Server.iceballcentral.repl.co/bricks/remove";
 
     private const string SetLockedURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/set-locked";
 
-    private const string CreateRoomURL = "http://localhost:3000/rooms/create";
+    private const string CreateRoomURL = "https://BricksVR-Server.iceballcentral.repl.co/rooms/create";
 
     private const string StartExportURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/begin-export";
 
-    private const string RoomInfoURL = "http://localhost:3000/rooms";
+    private const string RoomInfoURL = "https://BricksVR-Server.iceballcentral.repl.co/rooms";
 
     private const string SetNicknameURL = "https://us-central1-bricksvr-unity.cloudfunctions.net/setnickname";
 
-    private const string FriendOnlineStatus = "http://localhost:3000/friends/online";
+    private const string FriendOnlineStatus = "https://BricksVR-Server.iceballcentral.repl.co/friends/online";
 
 
-    private const string IsVersionSupportedURL = "http://localhost:3000/version";
+    private const string IsVersionSupportedURL = "https://BricksVR-Server.iceballcentral.repl.co/version";
 
     
 
-    private const string FriendsInfoList = "http://localhost:3000/friends/info";
+    private const string FriendsInfoList = "https://BricksVR-Server.iceballcentral.repl.co/friends/info";
 
 
     private const string VisitFriend = "";
