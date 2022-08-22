@@ -10,7 +10,7 @@ Some premium assets have been removed from this project, including some music an
 
 ## Notes about the project
 
-This was my first Unity project. If you're combing through the code, expect some odd, inefficient, and anti-idiomatic code. I began to focus on better code towards the end of the project but the codebase is still littered with very low quality work.
+This was Nat's first Unity project. If you're combing through the code, expect some odd, inefficient, and anti-idiomatic code. Nat began to focus on better code towards the end of the project but the codebase is still littered with very low quality work.
 
 ## Gallery
 
