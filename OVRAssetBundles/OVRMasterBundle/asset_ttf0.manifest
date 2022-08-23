@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 1981530135
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fbec2fbdc4586e7bf88e35eeb02de64e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cea17de082da1dfd38b5ed053fc34ca1
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Fonts/Oxanium-SemiBold.ttf
+- Assets/Fonts/Oxanium-Regular.ttf
+- Assets/Fonts/Oxanium-Bold.ttf
+- Assets/Fonts/Oxanium-Light.ttf
+- Assets/Packages/TextMesh Pro/Fonts/LiberationSans.ttf
+- Assets/Fonts/Oxanium-ExtraBold.ttf
+- Assets/Fonts/Nunito-Regular.ttf
+Dependencies: []

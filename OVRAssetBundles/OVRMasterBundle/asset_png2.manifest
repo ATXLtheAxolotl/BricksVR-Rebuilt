@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 2805414900
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c69a25111fdac214b0f0358849428d05
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cf819413351efa443d662a7afa84e32d
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Images/Avatar/eyes.png
+- Assets/Images/crown-filled-yellow.png
+- Assets/Images/ReflectionSkyboxImages/invertedsky4.png
+- Assets/Images/volume-0.png
+Dependencies: []

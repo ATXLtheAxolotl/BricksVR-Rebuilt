@@ -6,7 +6,7 @@ public class FriendMenuManager : MonoBehaviour
 {
     public GameObject friendEntryPrefab;
 
-    public string[] friendCodes = UserSettings.GetInstance().FriendCodes.Split(char.Parse(";"));
+    public string[] friendCodes;
 
     public GameObject listParent;
     private Transform _listParentTransform;
@@ -14,6 +14,7 @@ public class FriendMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        friendCodes = UserSettings.GetInstance().FriendCodes.Split(char.Parse(";"));
         _listParentTransform = listParent.transform;
     }
 

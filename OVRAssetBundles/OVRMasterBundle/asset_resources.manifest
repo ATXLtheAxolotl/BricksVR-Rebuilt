@@ -1,0 +1,672 @@
+ManifestFileVersion: 0
+CRC: 182172051
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 784b4b8537bc0e856d40240151b904fe
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0d7c960e8a48d0484e46b47fc9fd6bbe
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cd4ff7916cbc1db4dae0b06d829ff79f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4cc745f1923a54193a93e1ac947eec8a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c7bf7662098894913a39933b1d32117d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e3e28962bfed04fc5a40359e4ab562c0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ad074644ff568a14187a3690cfbd7534, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 293f0b849824c47edbb68213a423f960, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: bc0d4aa42400b44a7ba7ba6381927f00, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 55a6cdf45fd6a42f89e251678c30e640, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 84a92b25f83d49b9bc132d206b370281, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 60501f755c4ca4c2da67c7e84e265693, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eb74bca629e694a71bffa14be31e17b1, type: 3}
+- Class: 114
+  Script: {fileID: 1488926636, guid: 30f4fd177e1fad742be136a8237ab587, type: 3}
+- Class: 114
+  Script: {fileID: -568422520, guid: 30f4fd177e1fad742be136a8237ab587, type: 3}
+- Class: 114
+  Script: {fileID: -1029778088, guid: 30f4fd177e1fad742be136a8237ab587, type: 3}
+- Class: 114
+  Script: {fileID: -363599832, guid: 30f4fd177e1fad742be136a8237ab587, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: aab4c587457d86f4ca80582f946785ad, type: 3}
+- Class: 114
+  Script: {fileID: -1029778088, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+- Class: 114
+  Script: {fileID: -363599832, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 79b7e65854ace8f44b05c52c6e824354, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fd1aea88230be457d84eb02cb5ffe4dc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ba42ab098f77e4d498c06c0063ddee77, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ca62cf294e12d46db8732ce77d536b78, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8236beb9a6b4348e69ae3b92f345c8a8, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67ea36d9ddf5b49c18d5cfef6e451564, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b3d881e962d099f4a8eb492ef7e9a8c0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ecbc77e9439d44d9ebe5175c55df01bd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2705215ac5b84b70bacc50632be6e391, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 939e537a16cb14f5c9ada2ca2215be9c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 318ea19a179144291b96ddf1dcc986fc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 30281b9ae44414091b6b7b4d163a21d6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7d6393ba8cd554dd4b70d552362a2105, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 763a1fbad94d3481a936f7bdf5d5d9d0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 08dff4fb3b027234c8a2562e96aa0846, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d3cd67fb50bb0453695bc37913002112, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 48f462fca19d7479d9058286e952c03f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ab2114bdc8544297b417dfefe9f1e410, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5010294f0a83f4f0db1aa1ab812ddecd, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7c3dc45f830904bc3b15c943fba586ec, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Resources/BrickModels/Bricks/Brick_2x2/Brick_2x2_HollowBody.fbx
+- Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_diffuse_roughness_2048.png
+- Assets/VrTunnellingPro/Resources/Logos/VrTunnellingProLogo.jpg
+- Assets/Resources/BrickModels/Bricks/Brick_2x3/Brick_2x3_SolidBody.fbx
+- Assets/Resources/BrickModels/Windows/Window_1x2/Window_1x2_HollowBody.fbx
+- Assets/Resources/1x4Plate - Placed.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x2/Plate_1x2_HollowBody.fbx
+- Assets/Resources/1x1_1FaceSideStud.prefab
+- Assets/Resources/BrickModels/Plates/Plate_2x2_1Stud/Plate_2x2_1Stud_Complete.fbx
+- Assets/Resources/Sounds/brickcarpet2.wav
+- Assets/Resources/BrickModels/Slopes/Slope_2x2/Slope_2x2_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x6/Tile_1x6_HollowBody.fbx
+- Assets/VrTunnellingPro/Resources/Shaders/Window.shader
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_4x4/Slope_Corner_4x4_HollowBody.fbx
+- Assets/Resources/1x1-2_3Slope.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x1/Tile_1x1_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x4Tile.fbx
+- Assets/Resources/BrickModels/z_OldModels/2x4Plate.fbx
+- Assets/Resources/1x3Slope - Placed.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x4/Tile_1x4_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x10/Tile_1x10_Complete.fbx
+- Assets/Resources/1x4Slope.prefab
+- Assets/Resources/BrickModels/Plates/Plate_2x6/Plate_2x6_SolidBody.fbx
+- Assets/Resources/BrickModels/z_Extras/Slope_Tube.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x2/Plate_2x2_SolidBody_NoBevel.fbx
+- Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_diffuse_roughness_256.png
+- Assets/Resources/BrickModels/Tiles/Tile_1x8/Tile_1x8_SolidBody.fbx
+- Assets/Resources/1x8.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_2x8/Brick_2x8_SolidBody_NoBevel.fbx
+- Assets/Resources/2x8Tile.prefab
+- Assets/Resources/1x2Window.prefab
+- Assets/Resources/1x1 - Placed.prefab
+- Assets/Resources/1x3.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_2x2/Brick_2x2_Complete.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x4/Tile_1x4_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x1/Brick_1x1_HollowBody_NoBevel.fbx
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader
+- Assets/Resources/BrickModels/Tiles/Tile_1x4/Tile_1x4_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/z_OldModels/2x4Tile.fbx
+- Assets/Resources/1x4Tile - Placed.prefab
+- Assets/Packages/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+- Assets/VrTunnellingPro/Resources/Meshes/Iris.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x1Plate.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x2Plate.fbx
+- Assets/VrTunnellingPro/Editor/Resources/Logos/VrTunnellingProMobileLogo.jpg
+- Assets/Resources/2x4Tile - Placed.prefab
+- Assets/Resources/1x8Tile.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_2x4/Brick_2x4_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x8/Brick_2x8_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x4/Brick_1x4_SolidBody.fbx
+- Assets/Resources/BrickMaterials/bright-purple.mat
+- Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_PC_SingleComponent.shader
+- Assets/Resources/BrickModels/Slopes/Slope_1x2/Slope_1x2_HollowBody.fbx
+- Assets/Resources/1x4Masonry.prefab
+- Assets/Resources/BrickMaterials/bright-yel-green.mat
+- Assets/Resources/BrickModels/Plates/Plate_2x2/Plate_2x2_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x10/Tile_1x10_SolidBody.fbx
+- Assets/Resources/2x2CornerPlate - Placed.prefab
+- Assets/Oculus/VR/Resources/OVRMRUnlitTransparent.shader
+- Assets/Packages/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+- Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_2048.png
+- Assets/Resources/BrickModels/Slopes/Slope_2x2/Slope_2x2_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x2_Corner/Plate_2x2_Corner_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x8/Brick_2x8_HollowBody_NoBevel.fbx
+- Assets/Resources/1x2Tile.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_2x2/Slope_Corner_2x2_Complete.fbx
+- Assets/Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF Outline.asset
+- Assets/Resources/BrickModels/Bricks/Brick_2x8/Brick_2x8_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x8/Plate_2x8_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x1/Brick_1x1_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x2_Corner/Brick_2x2_Corner_Complete.fbx
+- Assets/Resources/1x10Plate.prefab
+- Assets/Resources/1x1.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x2/Tile_1x2_SolidBody_NoBevel.fbx
+- Assets/Resources/1x1Tile.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x3/Brick_1x3_HollowBody_NoBevel.fbx
+- Assets/Resources/2x8Plate - Placed.prefab
+- Assets/Resources/1x2_1FaceSideStud.prefab
+- Assets/Resources/2x3.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x10/Plate_1x10_HollowBody.fbx
+- Assets/Packages/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+- Assets/Resources/BrickModels/Tiles/Tile_1x1/Tile_1x1_HollowBody.fbx
+- Assets/Resources/2x3 - Placed.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_2x2/Slope_Corner_2x2_SolidBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_3x3/Plate_3x3_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x8/Brick_1x8_SolidBody.fbx
+- Assets/Resources/BrickMaterials/bright-red.mat
+- Assets/Resources/BrickModels/Slopes/Slope_1x4/Slope_1x4_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x10/Plate_1x10_Complete.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x2/Tile_1x2_SolidBody.fbx
+- Assets/Resources/1x6Plate - Placed.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_2x3/Brick_2x3_Complete.fbx
+- Assets/Resources/2x2Slope.prefab
+- Assets/Resources/2x2Slope - Placed.prefab
+- Assets/Resources/BrickModels/Plates/Plate_3x3/Plate_3x3_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x10/Tile_1x10_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_Round_1x1/Tile_Round_1x1_SolidBody.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x1Tile.fbx
+- Assets/Resources/BrickModels/Arches/Brick_1x4_Arch/Brick_1x4_Arch_Complete.fbx
+- Assets/Resources/1x4_1FaceSideStud.prefab
+- Assets/Resources/1x6Tile - Placed.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_1x4/Slope_1x4_SolidBody.fbx
+- Assets/Resources/ONSPSettings.asset
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_2x2/Slope_Corner_2x2_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x6/Plate_1x6_HollowBody.fbx
+- Assets/Resources/1x1_1FaceSideStud - Placed.prefab
+- Assets/Resources/BrickModels/z_Extras/Round_Stud.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x4/Brick_1x4_SolidBody_NoBevel.fbx
+- Assets/Resources/1x8Tile - Placed.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x1/Brick_1x1_HollowBody.fbx
+- Assets/Resources/Sounds/spawnset.wav
+- Assets/Resources/BrickModels/Slopes/Slope_1x2x3/Slope_1x2x3_HollowBody.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x3/Slope_1x3_SolidBody.fbx
+- Assets/Resources/1x2Plate1Stud.prefab
+- Assets/Resources/BrickModels/Plates/Plate_2x8/Plate_2x8_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x8/Tile_1x8_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x3/Plate_1x3_SolidBody.fbx
+- Assets/Resources/2x2Plate1Stud - Placed.prefab
+- Assets/Resources/2x8.prefab
+- Assets/Resources/2x2CornerTile.prefab
+- Assets/Resources/4x2 - Placed.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x8/Brick_1x8_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x4/Plate_2x4_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/z_OldModels/2x2.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x2_1Stud/Plate_1x2_1Stud_Complete.fbx
+- Assets/Resources/BrickMaterials/bright-yellow.mat
+- Assets/Resources/1x6Tile.prefab
+- Assets/VrTunnellingPro/Resources/Shaders/BlitA.shader
+- Assets/Resources/BrickModels/Plates/Plate_1x4/Plate_1x4_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_Round_1x1/Plate_Round_1x1_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x4/Brick_1x4_HollowBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x10/Brick_1x10_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x3/Plate_2x3_HollowBody.fbx
+- Assets/Resources/2x3Plate.prefab
+- Assets/Resources/BrickModels/Arches/Brick_1x4_Arch/Brick_1x4_Arch_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x4/Brick_2x4_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x8/Tile_2x8_Complete+HollowBody_NoBevel.fbx
+- Assets/Resources/1x10Plate - Placed.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x3/Tile_1x3_SolidBody.fbx
+- Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_Mobile_Loader.shader
+- Assets/Resources/BrickModels/Plates/Plate_2x2_Corner/Plate_2x2_Corner_Complete.fbx
+- Assets/Resources/1x2x3Slope.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x8/Brick_1x8_HollowBody.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x4x2-3/Slope_1x4x2-3_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x3/Tile_1x3_Complete.fbx
+- Assets/Resources/BrickModels/z_OldModels/2x2Tile.fbx
+- Assets/Resources/BrickModels/SideStudBricks/Brick_1x1_1FaceSideStud/Brick_1x1_1FaceSideStud_Complete.fbx
+- Assets/Resources/1x8Plate.prefab
+- Assets/Resources/1x3Arch.prefab
+- Assets/Resources/1x2Slope - Placed.prefab
+- Assets/VrTunnellingPro/Resources/Shaders/Skybox.shader
+- Assets/Resources/BrickModels/Plates/Plate_3x3/Plate_3x3_HollowBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x2/Brick_1x2_Complete.fbx
+- Assets/VrTunnellingPro/Resources/Logos/VrTunnellingProPresetLogo.jpg
+- Assets/Resources/1x4Plate.prefab
+- Assets/VrTunnellingPro/Resources/Shaders/TunnellingVertexInner.shader
+- Assets/Resources/BrickModels/Plates/Plate_Round_1x1/Plate_Round_1x1_HollowBody.fbx
+- Assets/Resources/1x1-2_3Slope - Placed.prefab
+- Assets/Resources/BrickModels/Arches/Brick_1x3_Arch/Brick_1x3_Arch_SolidBody.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x10Plate.fbx
+- Assets/Resources/1x10 - Placed.prefab
+- Assets/Resources/BrickModels/Plates/Plate_2x2_Corner/Plate_2x2_Corner_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x1/Plate_1x1_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x1/Plate_1x1_SolidBody.fbx
+- Assets/Resources/BrickMaterials/reddish-brown.mat
+- Assets/Resources/1x1_4FaceSideStud.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x1/Tile_1x1_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x10/Tile_1x10_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x2/Plate_2x2_Complete.fbx
+- Assets/Resources/2x3Plate - Placed.prefab
+- Assets/Resources/1x6 - Placed.prefab
+- Assets/Resources/BrickModels/Plates/Plate_2x8/Plate_2x8_HollowBody.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_2x2/Slope_2x2_Complete.fbx
+- Assets/Resources/1x2Tile - Placed.prefab
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader
+- Assets/Resources/BrickModels/Pyramids/Brick_1x1_Pyramid/Brick_1x1_Pyramid_SolidBody.fbx
+- Assets/Resources/1x3Tile.prefab
+- Assets/Resources/2x6Plate.prefab
+- Assets/Resources/1x10.prefab
+- Assets/Resources/1x2Masonry.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x4/Plate_1x4_Complete.fbx
+- Assets/Resources/1x4-2_3Slope.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_1x2/Slope_1x2_SolidBody.fbx
+- Assets/Resources/Sounds/success.wav
+- Assets/Resources/BrickModels/z_Extras/Stud.fbx
+- Assets/Resources/2x2Plate - Placed.prefab
+- Assets/Plugins/Normal/Resources/NormcoreAppSettings.asset
+- Assets/Resources/BrickModels/Tiles/Tile_1x1/Tile_1x1_Complete.fbx
+- Assets/Oculus/VR/Resources/Cubemap Blit.shader
+- Assets/Resources/BrickModels/Tiles/Tile_2x4/Tile_2x4_Complete.fbx
+- Assets/Resources/1x1RoundTile - Placed.prefab
+- Assets/Resources/2x2Plate.prefab
+- Assets/Resources/1x4.prefab
+- Assets/Resources/BrickModels/Arches/Brick_1x6_Arch/Brick_1x6_Arch_Complete.fbx
+- Assets/Resources/2x6Plate - Placed.prefab
+- Assets/Resources/2x8Tile - Placed.prefab
+- Assets/Resources/2x2Corner.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_1x3/Slope_1x3_HollowBody_NoBevel.fbx
+- Assets/Resources/Bob.prefab
+- Assets/VrTunnellingPro/Resources/Shaders/TunnellingVertexOuter.shader
+- Assets/Resources/BrickModels/Plates/Plate_2x4/Plate_2x4_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x4/Tile_2x4_SolidBody_NoBevel.fbx
+- Assets/Resources/1x2Plate.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_2x2/Slope_2x2_HollowBody_NoBevel.fbx
+- Assets/Resources/Sounds/spawnset2.wav
+- Assets/Resources/BrickModels/Misc/Bob.fbx
+- Assets/Resources/BrickModels/Windows/Window_1x2/Window_1x2_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x4/Plate_2x4_Complete.fbx
+- Assets/Oculus/VR/Resources/OVRMRUnlit.shader
+- Assets/Resources/BrickModels/Bricks/Brick_1x2/Brick_1x2_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x8/Tile_2x8_SolidBody_NoBevel.fbx
+- Assets/Resources/1x2Slope.prefab
+- Assets/Resources/BrickModels/SideStudBricks/Brick_1x1_4FaceSideStud/Brick_1x1_4FaceSideStud_Complete.fbx
+- Assets/Resources/BrickMaterials/bright-green.mat
+- Assets/Resources/BrickModels/Bricks/Brick_1x3/Brick_1x3_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x10/Plate_1x10_SolidBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x2/Plate_1x2_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x6/Brick_1x6_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x3/Brick_1x3_SolidBody.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x2_Inverted/Slope_1x2_Inverted_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x4/Tile_2x4_HollowBody.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_4x4/Slope_Corner_4x4_SolidBody.fbx
+- Assets/Resources/4x4CornerSlope - Placed.prefab
+- Assets/Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop
+  Shadow.mat
+- Assets/Resources/BrickModels/Plates/Plate_1x6/Plate_1x6_SolidBody.fbx
+- Assets/Resources/2x6 - Placed.prefab
+- Assets/Resources/1x6Arch.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_2x6/Tile_2x6_Complete-HollowBody.fbx
+- Assets/Resources/1x3Arch - Placed.prefab
+- Assets/Resources/1x1Plate.prefab
+- Assets/Resources/BrickModels/z_OldModels/4x2.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x1/Brick_1x1_Complete.fbx
+- Assets/Resources/BrickModels/Arches/Brick_1x3_Arch/Brick_1x3_Arch_Complete.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x3/Slope_1x3_Complete.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x1.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x1/Plate_1x1_HollowBody_NoBevel.fbx
+- Assets/Resources/1x4Tile.prefab
+- Assets/Resources/BrickMaterials/spr-yellowish-green.mat
+- Assets/Resources/1x2 - Placed.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_1x2_Inverted/Slope_1x2_Inverted_Complete.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x4/Tile_1x4_HollowBody.fbx
+- Assets/Resources/1x4_1FaceSideStud - Placed.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x10/Brick_1x10_HollowBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x1/Brick_1x1_SolidBody_NoBevel.fbx
+- Assets/Oculus/Avatar/Resources/Materials/AvatarSurfaceShaderSelfOccluding.shader
+- Assets/Resources/1x10Tile.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x10/Brick_1x10_Complete.fbx
+- Assets/Resources/2x2.prefab
+- Assets/Oculus/VR/Resources/Unlit Transparent Color.shader
+- Assets/Resources/BrickModels/Slopes/Slope_1x1x2-3/Slope_1x1x2-3_Complete.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x2/Tile_2x2_Complete.fbx
+- Assets/Resources/BrickModels/Bricks_Masonry/Brick_1x4_Masonry/Brick_1x4_Masonry_SolidBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x8/Plate_2x8_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x4/Brick_1x4_Complete.fbx
+- Assets/Resources/ThreeLeafedPlant.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_1x4/Slope_1x4_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x2/Plate_2x2_HollowBody_NoBevel.fbx
+- Assets/VrTunnellingPro/Resources/Shaders/Tunnelling.shader
+- Assets/Resources/BrickModels/Bricks/Brick_2x2_Corner/Brick_2x2_Corner_HollowBody.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x2x3/Slope_1x2x3_Complete.fbx
+- Assets/Resources/2x2CornerPlate.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x8/Plate_1x8_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x6/Tile_1x6_SolidBody.fbx
+- Assets/Resources/1x1Pyramid - Placed.prefab
+- Assets/Resources/BrickModels/Arches/Brick_1x4_Arch/Brick_1x4_Arch_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_Round_1x1/Plate_Round_1x1_Complete.fbx
+- Assets/Resources/1x2SlopeInverted.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_2x6/Brick_2x6_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x3/Tile_2x3_Complete-HollowBody.fbx
+- Assets/Resources/1x3Plate.prefab
+- Assets/Oculus/Avatar/Resources/Materials/AvatarSurfaceShaderPBS.shader
+- Assets/Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+- Assets/Resources/BrickModels/Tiles/Tile_2x4/Tile_2x4_Complete+HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x2/Brick_2x2_SolidBody_NoBevel.fbx
+- Assets/Resources/4x4CornerSlope.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x3/Plate_1x3_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x2/Tile_1x2_HollowBody.fbx
+- Assets/Oculus/VR/Resources/OVRMRCameraFrameLit.shader
+- Assets/Resources/BrickModels/Tiles/Tile_1x3/Tile_1x3_HollowBody.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x2x3/Slope_1x2x3_SolidBody.fbx
+- Assets/Resources/BrickMaterials/dark-azur.mat
+- Assets/Resources/2x4Tile.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x10/Brick_1x10_SolidBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x2/Plate_2x2_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x10/Tile_1x10_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x3/Brick_2x3_HollowBody.fbx
+- Assets/Resources/1x1Tile - Placed.prefab
+- Assets/Resources/1x4 - Placed.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x10/Brick_1x10_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Arches/Brick_1x3_Arch/Brick_1x3_Arch_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x2/Tile_2x2_Complete+HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x6/Plate_1x6_Complete.fbx
+- Assets/Packages/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+- Assets/Resources/OVRPlatformToolSettings.asset
+- Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_Mobile_CombinedMesh.shader
+- Assets/Resources/BlankPlacedBrick.prefab
+- Assets/Resources/2x2Corner - Placed.prefab
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader
+- Assets/Resources/2x6Tile.prefab
+- Assets/Resources/FlatPlant.prefab
+- Assets/Resources/BrickMaterials/bright-orange.mat
+- Assets/Resources/BrickModels/Tiles/Tile_2x3/Tile_2x3_SolidBody.fbx
+- Assets/VrTunnellingPro/Resources/Shaders/TunnellingVertex.shader
+- Assets/Oculus/Avatar/Resources/Materials/Expressive/Avatar_Mobile_CombinedMeshExpressive.shader
+- Assets/Resources/BrickModels/Slopes/Slope_1x4/Slope_1x4_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x2/Brick_1x2_HollowBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x10/Plate_1x10_SolidBody_NoBevel.fbx
+- Assets/Resources/2x2CornerSlope - Placed.prefab
+- Assets/Resources/BrickModels/Bricks_Masonry/Brick_1x2_Masonry/Brick_1x2_Masonry_HollowBody.fbx
+- Assets/Resources/BrickModels/z_Extras/Tube_Short.fbx
+- Assets/Resources/BrickModels/Windows/Window_1x2/Window_1x2_SolidBody.fbx
+- Assets/Resources/BrickModels/SideStudBricks/Brick_1x2_1FaceSideStud/Brick_1x2_1FaceSideStud_Complete.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x1x2-3/Slope_1x1x2-3_SolidBody.fbx
+- Assets/Resources/2x4Plate.prefab
+- Assets/Resources/1x2Window - Placed.prefab
+- Assets/Resources/2x2Plate1Stud.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x3/Tile_1x3_SolidBody_NoBevel.fbx
+- Assets/Oculus/VR/Resources/Underlay Transparent Occluder.shader
+- Assets/Resources/BrickModels/Tiles/Tile_2x2/Tile_2x2_SolidBody.fbx
+- Assets/Resources/1x3Tile - Placed.prefab
+- Assets/Resources/2x3Tile.prefab
+- Assets/Oculus/VR/Resources/Texture2D Blit.shader
+- Assets/Oculus/Avatar/Resources/Materials/Expressive/Avatar_PC_SingleComponentExpressive.shader
+- Assets/Resources/Sounds/brickcarpet1.wav
+- Assets/Resources/BrickModels/Bricks/Brick_1x2/Brick_1x2_SolidBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x4/Plate_1x4_SolidBody.fbx
+- Assets/Resources/1x2Plate1Stud - Placed.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x4/Tile_1x4_HollowBody_NoBevel.fbx
+- Assets/VrTunnellingPro/Resources/Logos/VrTunnellingProMobileLogo.jpg
+- Assets/Resources/BrickModels/Bricks/Brick_1x6/Brick_1x6_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x4/Tile_2x4_SolidBody.fbx
+- Assets/Resources/BrickModels/Arches/Brick_1x6_Arch/Brick_1x6_Arch_SolidBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x6/Tile_2x6_SolidBody.fbx
+- Assets/Resources/BrickModels/Arches/Brick_1x6_Arch/Brick_1x6_Arch_HollowBody.fbx
+- Assets/Oculus/Avatar/Resources/Materials/AvatarPBRV2Simple.shader
+- Assets/Plugins/Normal/Internal/Resources/InternalSettings.asset
+- Assets/Resources/1x3Slope.prefab
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader
+- Assets/Resources/BrickModels/Plates/Plate_2x6/Plate_2x6_HollowBody.fbx
+- Assets/Resources/3x3CornerSlope - Placed.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_1x2/Slope_1x2_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x4Plate.asset
+- Assets/Resources/BrickModels/Tiles/Tile_2x2_Corner/Tile_2x2_Corner_SolidBody.fbx
+- Assets/Resources/1x1RoundPlate - Placed.prefab
+- Assets/Resources/Bob - Placed.prefab
+- Assets/Resources/Sounds/brick-place3.wav
+- Assets/Resources/BrickModels/Tiles/Tile_2x8/Tile_2x8_SolidBody.fbx
+- Assets/VrTunnellingPro/Editor/Resources/Logos/VrTunnellingProMobilePresetLogo.jpg
+- Assets/Resources/Sounds/brick-place2.wav
+- Assets/Resources/1x1RoundTile.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x8/Plate_1x8_HollowBody.fbx
+- Assets/Resources/2x2CornerSlope.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_2x6/Brick_2x6_Complete.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x8/Tile_1x8_Complete-HollowBody.fbx
+- Assets/Resources/BrickMaterials/black.mat
+- Assets/Resources/BrickModels/Slopes/Slope_1x2/Slope_1x2_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x2/Plate_1x2_SolidBody_NoBevel.fbx
+- Assets/VrTunnellingPro/Editor/Resources/Logos/VrTunnellingProPresetLogo.jpg
+- Assets/Resources/1x3 - Placed.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x3/Brick_1x3_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_1x4/Brick_1x4_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x6/Tile_2x6_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x2_Corner/Brick_2x2_Corner_SolidBody.fbx
+- Assets/Resources/1x2Masonry - Placed.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x2_1Stud/Plate_1x2_1Stud_SolidBody.fbx
+- Assets/Resources/BrickModels/Plants/Plant_Green_Flat.fbx
+- Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_256.png
+- Assets/Resources/1x2_1FaceSideStud - Placed.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x8/Plate_1x8_Complete.fbx
+- Assets/Resources/2x2CornerTile - Placed.prefab
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader
+- Assets/Resources/BrickModels/Plates/Plate_1x3/Plate_1x3_HollowBody_NoBevel.fbx
+- Assets/Plugins/Normal/Internal/Resources/InternalDirectory.asset
+- Assets/Resources/1x4-2_3Slope - Placed.prefab
+- Assets/Resources/2x3Tile - Placed.prefab
+- Assets/Resources/BrickMaterials/nougat.mat
+- Assets/Resources/BrickModels/Plants/Plant_Green_MediumHeight.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x4/Plate_2x4_HollowBody.fbx
+- Assets/Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF NewUI.asset
+- Assets/Plugins/Normal/Resources/NormcoreProjectSettings.asset
+- Assets/Resources/BrickModels/Bricks/Brick_1x2/Brick_1x2_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x8/Plate_2x8_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x2.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x2_1Stud/Plate_1x2_1Stud_HollowBody.fbx
+- Assets/Resources/2x2 - Placed.prefab
+- Assets/Resources/1x1_4FaceSideStud - Placed.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_2x2/Tile_2x2_HollowBody.fbx
+- Assets/Resources/1x2SlopeInverted - Placed.prefab
+- Assets/Resources/2x2Tile.prefab
+- Assets/Resources/BrickMaterials/gray.mat
+- Assets/Resources/BrickModels/Tiles/Tile_2x3/Tile_2x3_Complete.fbx
+- Assets/Resources/BrickGhost.prefab
+- Assets/Resources/BrickModels/Plates/Plate_2x2_1Stud/Plate_2x2_1Stud_HollowBody.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x4.fbx
+- Assets/Oculus/Avatar/Resources/Materials/Expressive/Avatar_Mobile_SingleComponentExpressive.shader
+- Assets/Resources/BrickModels/z_OldModels/1x10.fbx
+- Assets/Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+- Assets/VrTunnellingPro/Resources/Shaders/Skysphere.shader
+- Assets/Resources/BrickModels/Slopes/Slope_1x4x2-3/Slope_1x4x2-3_Complete.fbx
+- Assets/Resources/BrickMaterials/white.mat
+- Assets/Resources/1x10Tile - Placed.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_1x2/Slope_1x2_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x6/Tile_1x6_Complete.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x3/Slope_1x3_HollowBody.fbx
+- Assets/Resources/BrickModels/z_OldModels/1x10Tile.fbx
+- Assets/Resources/BrickModels/z_Extras/Tube.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x3/Plate_2x3_Complete.fbx
+- Assets/Oculus/VR/Resources/OVRMRCameraFrame.shader
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_3x3/Slope_Corner_3x3_SolidBody.fbx
+- Assets/Resources/BrickMaterials/ghost.mat
+- Assets/Resources/BrickModels/SideStudBricks/Brick_1x4_1FaceSideStud/Brick_1x4_1FaceSideStud_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x4/Brick_2x4_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x2_Corner/Tile_2x2_Corner_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x3/Plate_1x3_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_3x3/Slope_Corner_3x3_HollowBody.fbx
+- Assets/VrTunnellingPro/Editor/Resources/Logos/VrTunnellingProLogo.jpg
+- Assets/Resources/2x8Plate.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_2x2/Slope_2x2_SolidBody.fbx
+- Assets/Oculus/Avatar/Resources/Materials/AvatarSurfaceShaderPBSV2.shader
+- Assets/VrTunnellingPro/Resources/Logos/VrTunnellingProMobilePresetLogo.jpg
+- Assets/Resources/BrickModels/Plates/Plate_1x1/Plate_1x1_HollowBody.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x8/Tile_2x8_Complete-HollowBody.fbx
+- Assets/Resources/2x6Tile - Placed.prefab
+- Assets/Resources/Sounds/menuclick.wav
+- Assets/Resources/Custom VR Player.prefab
+- Assets/Resources/1x6.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x2/Plate_1x2_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x3/Slope_1x3_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x4/Plate_1x4_SolidBody_NoBevel.fbx
+- Assets/Resources/ThreeLeafedPlant - Placed.prefab
+- Assets/Resources/1x2.prefab
+- Assets/Resources/BrickModels/Bricks_Masonry/Brick_1x4_Masonry/Brick_1x4_Masonry_HollowBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x8/Brick_2x8_HollowBody.fbx
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader
+- Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_diffuse_roughness_1024.png
+- Assets/Resources/1x1Plate - Placed.prefab
+- Assets/Resources/2x2Tile - Placed.prefab
+- Assets/Resources/BrickModels/Bricks_Masonry/Brick_1x2_Masonry/Brick_1x2_Masonry_SolidBody.fbx
+- Assets/Resources/1x8Plate - Placed.prefab
+- Assets/Resources/BrickModels/Bricks_Masonry/Brick_1x2_Masonry/Brick_1x2_Masonry_Complete.fbx
+- Assets/Resources/OVRBuildConfig.asset
+- Assets/Resources/BrickModels/Tiles/Tile_1x3/Tile_1x3_HollowBody_NoBevel.fbx
+- Assets/Resources/1x4Arch.prefab
+- Assets/Resources/2x6.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x3/Plate_1x3_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x1/Plate_1x1_SolidBody_NoBevel.fbx
+- Assets/Resources/OculusPlatformSettings.asset
+- Assets/Resources/BrickModels/Bricks/Brick_2x4/Brick_2x4_SolidBody_NoBevel.fbx
+- Assets/Oculus/Avatar/Resources/Materials/Version1.5/Avatar_Mobile_SingleComponent.shader
+- Assets/VrTunnellingPro/Resources/Shaders/Mask.shader
+- Assets/Resources/BrickModels/Bricks/Brick_1x6/Brick_1x6_SolidBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x3/Plate_2x3_SolidBody.fbx
+- Assets/VrTunnellingPro/Resources/Shaders/TunnellingStencil.shader
+- Assets/Resources/1x8 - Placed.prefab
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_SDF.shader
+- Assets/Resources/BrickModels/Tiles/Tile_1x2/Tile_1x2_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_1x2_Inverted/Slope_1x2_Inverted_SolidBody.fbx
+- Assets/Oculus/Avatar/Resources/Materials/Expressive/AvatarEyeLens.shader
+- Assets/Resources/Sounds/brickcarpet3.wav
+- Assets/Resources/BrickModels/z_OldModels/1x2Tile.fbx
+- Assets/Resources/BrickModels/z_OldModels/2x2Plate.fbx
+- Assets/Oculus/Avatar/Resources/Materials/AvatarSurfaceShader.shader
+- Assets/Resources/1x4Masonry - Placed.prefab
+- Assets/Resources/BrickModels/Windows/Window_1x2/Window_1x2_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_3x3/Slope_Corner_3x3_Complete.fbx
+- Assets/Resources/1x6Arch - Placed.prefab
+- Assets/Resources/BrickModels/Slopes/Slope_Corner_4x4/Slope_Corner_4x4_Complete.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_1x1/Tile_1x1_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_2x2/Tile_2x2_SolidBody_NoBevel.fbx
+- Assets/Resources/1x1RoundPlate.prefab
+- Assets/Oculus/Avatar/Resources/FallbackTextures/fallback_normal_1024.tif
+- Assets/Resources/BrickMaterials/bright-blue.mat
+- Assets/Resources/BrickModels/Bricks/Brick_2x2/Brick_2x2_SolidBody.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x4/Plate_1x4_HollowBody_NoBevel.fbx
+- Assets/Resources/2x8 - Placed.prefab
+- Assets/Oculus/VR/Resources/Underlay Impostor.shader
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader
+- Assets/Resources/BrickModels/Slopes/Slope_1x4/Slope_1x4_HollowBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Tiles/Tile_Round_1x1/Tile_Round_1x1_Complete.fbx
+- Assets/Resources/4x2.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_1x2/Tile_1x2_Complete.fbx
+- Assets/Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+- Assets/Resources/BrickModels/Plates/Plate_2x2_1Stud/Plate_2x2_1Stud_SolidBody.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x6/Brick_2x6_SolidBody.fbx
+- Assets/Resources/1x6Plate.prefab
+- Assets/Resources/BrickModels/Bricks_Masonry/Brick_1x4_Masonry/Brick_1x4_Masonry_Complete.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x2/Brick_2x2_HollowBody_NoBevel.fbx
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader
+- Assets/Resources/BrickModels/z_OldModels/1x4Plate.fbx
+- Assets/Resources/1x4Slope - Placed.prefab
+- Assets/Resources/Sounds/brick-place1.wav
+- Assets/Resources/FlatPlant - Placed.prefab
+- Assets/Resources/2x4Plate - Placed.prefab
+- Assets/Resources/BrickModels/Plates/Plate_1x10/Plate_1x10_HollowBody_NoBevel.fbx
+- Assets/VrTunnellingPro/Resources/Shaders/SeparableBlur.shader
+- Assets/Packages/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader
+- Assets/Resources/BrickModels/Plates/Plate_2x4/Plate_2x4_SolidBody_NoBevel.fbx
+- Assets/Resources/1x4Arch - Placed.prefab
+- Assets/Resources/1x1Pyramid.prefab
+- Assets/VrTunnellingPro/Resources/Meshes/Skysphere.fbx
+- Assets/Resources/BrickModels/Pyramids/Brick_1x1_Pyramid/Brick_1x1_Pyramid_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_2x6/Plate_2x6_Complete.fbx
+- Assets/Resources/1x2Plate - Placed.prefab
+- Assets/Resources/BrickModels/Tiles/Tile_2x8/Tile_2x8_Complete.fbx
+- Assets/Resources/3x3CornerSlope.prefab
+- Assets/Resources/BrickModels/Windows/Window_1x2/Window_1x2_HollowBody_NoBevel.fbx
+- Assets/Resources/1x3Plate - Placed.prefab
+- Assets/Resources/BrickModels/Bricks/Brick_1x3/Brick_1x3_SolidBody_NoBevel.fbx
+- Assets/Resources/BrickModels/Bricks/Brick_2x4/Brick_2x4_Complete.fbx
+- Assets/Resources/BrickModels/Plates/Plate_1x2/Plate_1x2_SolidBody.fbx
+- Assets/Packages/TextMesh Pro/Resources/TMP Settings.asset
+Dependencies:
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png1
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png2
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_prefab0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_shader0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_ttf0

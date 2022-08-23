@@ -1,0 +1,174 @@
+ManifestFileVersion: 0
+CRC: 1957191099
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: aba2dd1fd95c73fb4270833505035ec1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: db7fa423b09d0bb885e11f977d211462
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7acd350054d8541338c4b04bd5f816bf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 447a33012787b4ef588615ed5be55a99, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 385057217a3d94149a92a5231e0a94c5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c3a427f1d4ad84cf8b67ab4f9176f678, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8b20766240bfa4a70b3c062bbef3a364, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 96b377133566a45508e76b39f357397a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1bb6c8e3972304e8ebc908dbd8ff36b1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b765ba0585b264ca58a6eb642cad49b0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ee78bc457faf84af5bbc5291ad8934cc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2d77a356549534de5a37fc9992eb16af, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4dbe1d17f5d83465ca51814882081f95, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c1ddae57c44a3894e91c2f1be91f02b0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: aab4c587457d86f4ca80582f946785ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4a476f9789ae9415da054d81b4989ee6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2e1202b7ca57f4ae4a4bff7d050316da, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 79b7e65854ace8f44b05c52c6e824354, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fd1aea88230be457d84eb02cb5ffe4dc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c8f7c3d9feed8420e8946c77ee58114b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67ea36d9ddf5b49c18d5cfef6e451564, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1ab6be95a16e4389a9c0a180f12de1a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 15a45caa3376b41ebbe16f87cbdee527, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a65cdba16e234c25bcc556eb5b771e5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a1c375bc9b9a64834bed34118c6d7d01, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5a3ce6dd4032b4a889133a3a20376781, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 303f0aaf2e4194362b9acc699f9c101b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 41f1c5417c9d7ab4b84e531f83f60a4b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8714c362c0c8a6449a9559a31cdab9a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 68356c3764ad390429ddad9e48ce8c31, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2ffade7edb5b1df45a6c3642149606c6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/UI/Player.prefab
+- Assets/Prefabs/Hammer.prefab
+- Assets/Prefabs/NewMainMenu.prefab
+- Assets/Prefabs/NewUI/MainMenuButton.prefab
+- Assets/Prefabs/BrickCityscape.prefab
+- Assets/Prefabs/UI/BrickPickerBrickTile.prefab
+- Assets/Prefabs/CustomHandRight.prefab
+- Assets/Prefabs/UI/Keyboard.prefab
+- Assets/Prefabs/BrickComponents/BrickStud.prefab
+- Assets/Prefabs/CustomHandLeft.prefab
+- Assets/Prefabs/BrickComponents/4x2BrickBody.prefab
+- Assets/Prefabs/BrickTree.prefab
+- Assets/Prefabs/BrickComponents/1x4BrickBody.prefab
+- Assets/Prefabs/NatureScene.prefab
+- Assets/Prefabs/MenuHand.prefab
+- Assets/Prefabs/teleportReticle.prefab
+- Assets/Prefabs/UI/RecentRoom.prefab
+- Assets/Prefabs/Base Plate.prefab
+- Assets/Prefabs/NewUI/OnOffControl.prefab
+- Assets/Prefabs/FloorConnector.prefab
+- Assets/Prefabs/Brush.prefab
+- Assets/Prefabs/UI/Friend.prefab
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/HandPoseDefaultPf.prefab
+- Assets/Prefabs/NewUI/SliderMarker.prefab
+- Assets/Prefabs/BrickComponents/2x2BrickBody.prefab
+- Assets/Prefabs/UI/PrimaryColorConfig.prefab
+Dependencies:
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_asset0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_controller0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_fbx0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png1
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png2
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_resources

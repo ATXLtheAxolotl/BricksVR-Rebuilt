@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 2229691223
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e971f1ca45d25ea1f32c2532a4779ae3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7ae03148ccc2d81279420f9cf5a52f48
+HashAppended: 0
+ClassTypes:
+- Class: 89
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Scenes/Main Scene/ReflectionProbe-8.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-1.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-16.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-23.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-15.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-9.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-18.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-5.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-25.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-12.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-0.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-7.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-11.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-13.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-4.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-17.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-22.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-14.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-21.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-10.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-19.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-2.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-3.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-20.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-6.exr
+- Assets/Scenes/Main Scene/ReflectionProbe-24.exr
+Dependencies: []

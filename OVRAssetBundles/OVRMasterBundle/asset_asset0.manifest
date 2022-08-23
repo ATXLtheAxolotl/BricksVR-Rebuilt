@@ -1,0 +1,41 @@
+ManifestFileVersion: 0
+CRC: 2588044127
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8c761582894fa04d90bc5d816b0f5f37
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 18baedd3002479d5e6bab2e82c3b61fb
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Mesh/Slider_selection1.asset
+- Assets/Mesh/Body_1_2.asset
+- Assets/Mesh/Slider_Base.asset
+- Assets/Mesh/Body_1_17.asset
+- Assets/Mesh/Slider_Arrows.asset
+- Assets/Fonts/Nunito-Regular SDF.asset
+- Assets/Mesh/Hands_NewRight.asset
+- Assets/Mesh/Body_1_19.asset
+- Assets/Fonts/Oxanium-Regular SDF.asset
+- Assets/Mesh/Hands_NewLeft.asset
+- Assets/Mesh/Base_Plate_32x32_Complete.asset
+Dependencies:
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_resources
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_ttf0

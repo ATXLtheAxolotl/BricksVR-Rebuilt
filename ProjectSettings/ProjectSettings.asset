@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 1
   accelerometerFrequency: 60
   companyName: BricksVR
-  productName: BricksVR
+  productName: BricksVR-Rebuilt
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 0, b: 0.25000048, a: 1}
@@ -173,7 +173,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.BricksVR.Reforged
+    Android: com.BricksVR.Rebuilt
     Standalone: com.BricksVR.Reforged
   buildNumber:
     Standalone: 39
@@ -255,8 +255,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: dev/bricksvr-keystore.keystore'
-  AndroidKeyaliasName: bricksvrgame
+  AndroidKeystoreName: D:/Unity/Keystores/BricksVR/user.keystore
+  AndroidKeyaliasName: bricksvr
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -722,13 +722,15 @@ PlayerSettings:
     1: NORMCORE;POSEIDON
     7: NORMCORE;POSEIDON;IGNORESTEAMWORKDISABLE
     14: NORMCORE
+    25: NORMCORE
   platformArchitecture:
     iPhone: 1
   scriptingBackend:
-    Android: 0
+    Android: 1
     Standalone: 1
   il2cppCompilerConfiguration: {}
-  managedStrippingLevel: {}
+  managedStrippingLevel:
+    Android: 1
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
   additionalIl2CppArgs: 

@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1568628401
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 30d27afd371f481ab23abda3c45b5c1d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 55d48f4ad9c3b13330b9eb5ee5686477
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_Transparent.shader
+- Assets/Shaders/StandardVertex.shader
+- Assets/Shaders/UnlitAlphaShader.shader
+- Assets/Shaders/PerInstanceColor.shader
+- Assets/Shaders/SimpleTeleportHighlight.shader
+- Assets/Shaders/Mobile Color Specular.shader
+Dependencies: []

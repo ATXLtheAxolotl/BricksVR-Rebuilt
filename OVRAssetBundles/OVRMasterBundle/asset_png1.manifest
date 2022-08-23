@@ -1,0 +1,48 @@
+ManifestFileVersion: 0
+CRC: 3840343126
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4fe079a7b30893563be7c11a93b32ceb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c90fc19e2679e5295d10bd00f33cb4c3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Images/Avatar/Eyes4.png
+- Assets/Oculus/LipSync/Models/RobotHead_TextureFlip/PP.png
+- Assets/Images/Avatar/Eyes10.png
+- Assets/Images/Avatar/Mouth1.png
+- Assets/Images/BrickScreenshots/Slope-Gray2.png
+- Assets/Images/Avatar/Eyes5.png
+- Assets/Textures/Carpet012_1K_Normal.png
+- Assets/Images/recent-icon.png
+- Assets/Images/Avatar/Mouth6.png
+- Assets/VrTunnellingPro/Gizmos/vrtp_icon.png
+- Assets/Images/BrickScreenshots/SideStud-Gray2.png
+- Assets/Images/bvr-icon.png
+- Assets/Images/BrickScreenshots/Brick-Gray2.png
+- Assets/Oculus/LipSync/Models/RobotHead_TextureFlip/Head-2.png
+- Assets/Images/Avatar/Mouth7.png
+- Assets/Images/create-icon.png
+- Assets/Textures/Carpet012_1K_AmbientOcclusion.png
+- Assets/Oculus/SampleFramework/Core/DebugUI/Textures/slider_slider.png
+- Assets/Images/Avatar/Eyes11.png
+- Assets/Images/Avatar/Eyes2.png
+- Assets/Images/Avatar/Eyes3.png
+- Assets/Images/Avatar/Eyes1.png
+- Assets/Images/volume-muted.png
+- Assets/Images/Label_Highlight_iconFull2.png
+- Assets/Textures/Carpet012_1K_Displacement.png
+- Assets/Images/BrickScreenshots/Tile-Gray2.png
+- Assets/Images/Avatar/Mouth10.png
+- Assets/Images/Bob.png
+- Assets/Images/volume-2.png
+- Assets/Images/Avatar/Mouth8.png
+Dependencies: []

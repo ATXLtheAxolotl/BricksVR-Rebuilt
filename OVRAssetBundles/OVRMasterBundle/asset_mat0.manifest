@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 190529978
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 851daf06b11af0edb2dd55183b59ec99
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b6c2060ca04522fbfe0620107df9ae0f
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Packages/Fantasy Skybox FREE/Materials/Classic/FS000_Day_06_Sunless.mat
+- Assets/Materials/TeleportLine.mat
+- Assets/Materials/BrickPerInstanceMaterial.mat
+- Assets/Materials/BobMaterial.mat
+- Assets/Materials/Slider_Inside.mat
+- Assets/Materials/NewFloor.mat
+- Assets/Materials/Blue.mat
+- Assets/Materials/SelectionMaterial.mat
+- Assets/Oculus/LipSync/Models/RobotHead_TextureFlip/Materials/sil.mat
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_transparent.mat
+- Assets/Materials/Black.mat
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
+- Assets/Oculus/LipSync/Models/RobotHead_TextureFlip/Materials/Head-2.mat
+- Assets/Materials/Dark Grey.mat
+- Assets/Materials/ButtonHoverMaterial.mat
+- Assets/Materials/SliderHovered.mat
+- Assets/Materials/SimpleTeleportHighlight.mat
+- Assets/Materials/LoadingMaterial.mat
+Dependencies:
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_png1
+- D:/Unity/bricksvr-game/OVRAssetBundles/OVRMasterBundle/asset_shader0

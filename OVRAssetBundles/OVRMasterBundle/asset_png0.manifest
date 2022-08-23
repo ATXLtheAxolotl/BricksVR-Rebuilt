@@ -1,0 +1,50 @@
+ManifestFileVersion: 0
+CRC: 1778404297
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2788684f2fd6292f81e185d1ad12f54a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cf819413351efa443d662a7afa84e32d
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 89
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Textures/ColorPickerHues.png
+- Assets/Images/Avatar/Eyes8.png
+- Assets/Images/back-icon.png
+- Assets/Images/friend-icon.png
+- Assets/Images/Avatar/Eyes7.png
+- Assets/Images/Avatar/Mouth5.png
+- Assets/Images/Avatar/Mouth2.png
+- Assets/Images/join-icon.png
+- Assets/Textures/unknown.png
+- Assets/Images/Avatar/Eyes9.png
+- Assets/Images/options-icon.png
+- Assets/Images/BrickScreenshots/Plate-Gray2.png
+- Assets/Textures/Bob_Diffuse_512.png
+- Assets/Images/checkmark-rounded.png
+- Assets/Images/Avatar/Eyes12.png
+- Assets/Images/rounded-square (1).png
+- Assets/Packages/Fantasy Skybox FREE/Materials/Classic/FS000_Day_06_Sunless.png
+- Assets/Images/Logo Color.png
+- Assets/FlexibleColorPicker/Sprites/DefGrad_S_Hor.png
+- Assets/Images/Avatar/Eyes6.png
+- Assets/Images/Avatar/Mouth3.png
+- Assets/Images/Avatar/Mouth4.png
+- Assets/Images/volume-3.png
+- Assets/Images/Avatar/Mouth12.png
+- Assets/Textures/Carpet012_1K_Color.png
+- Assets/Images/Avatar/Mouth9.png
+- Assets/Images/mouth.png
+- Assets/Images/Avatar/Mouth11.png
+- Assets/Images/volume-1.png
+- Assets/Images/BrickScreenshots/Misc-Gray2.png
+Dependencies: []
