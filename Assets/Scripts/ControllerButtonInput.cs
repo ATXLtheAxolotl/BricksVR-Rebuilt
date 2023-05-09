@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEngine.XR;
+using UnityEngine;
 
 public class ControllerButtonInput : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class ControllerButtonInput : MonoBehaviour
     public GameObject leftMenuHand;
     public GameObject rightMenuHand;
 
-    private OVRInput.Controller _activeController;
+    private InputDevice _activeController;
 
     private Session _session;
     private bool _reset;
@@ -20,7 +21,7 @@ public class ControllerButtonInput : MonoBehaviour
 
         leftMenuHand.SetActive(true);
         rightMenuHand.SetActive(false);
-        _activeController = OVRInput.Controller.LTouch;
+        _activeController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     }
 
     // Update is called once per frame

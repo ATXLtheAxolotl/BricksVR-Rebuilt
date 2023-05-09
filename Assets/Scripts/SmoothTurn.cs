@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
+﻿using UnityEngine.XR.Interaction.Toolkit;
+using Unity.XR.CoreUtils;
+using UnityEngine.XR;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class SmoothTurn : MonoBehaviour
 {
@@ -15,15 +13,16 @@ public class SmoothTurn : MonoBehaviour
 
     public float debugRotate = 0f;
 
-    private XRRig rig;
+    private XROrigin rig;
 
     private void Start()
     {
-        rig = GetComponent<XRRig>();
+        rig = GetComponent<XROrigin>();
     }
 
     private void Update()
     {
+        InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(new InputFeatureUsage<Vector2>("Primary2DAxisTouch"), out Vector2 value);
         float rotationAmount = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch).x;
         if (Application.isEditor) rotationAmount = debugRotate;
         if (Mathf.Abs(rotationAmount) > deadZone)
@@ -34,6 +33,6 @@ public class SmoothTurn : MonoBehaviour
 
     private void Rotate(float amount)
     {
-        rig.RotateAroundCameraUsingRigUp(amount * Time.deltaTime * turnSpeed);
+        rig.RotateAroundCameraUsingOriginUp(amount * Time.deltaTime * turnSpeed);
     }
 }

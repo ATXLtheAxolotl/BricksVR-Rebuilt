@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class RotationSettingHandler : MonoBehaviour
 {
-    private SnapTurnProvider _snapTurn;
+    private DeviceBasedSnapTurnProvider _snapTurn;
     private SmoothTurn _smoothTurn;
     private void Awake()
     {
-        _snapTurn = GetComponent<SnapTurnProvider>();
+        _snapTurn = GetComponent<DeviceBasedSnapTurnProvider>();
         _smoothTurn = GetComponent<SmoothTurn>();
     }
 

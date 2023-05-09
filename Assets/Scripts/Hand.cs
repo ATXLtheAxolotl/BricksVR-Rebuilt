@@ -12,13 +12,10 @@ language governing permissions and limitations under the license.
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections.Generic;
 using UnityEngine.Serialization;
+using Unity.XR.Oculus;
+using UnityEngine.XR;
 using System.Linq;
 using UnityEngine;
-
-
-#if UNITY_EDITOR
-using UnityEngine.SceneManagement;
-#endif
 
 namespace OVRTouchSample
 {
@@ -41,9 +38,9 @@ namespace OVRTouchSample
         public const float TriggerDebounceTime = 0.05f;
         public const float ThumbDebounceTime = 0.15f;
 
-        
+
         [FormerlySerializedAs("m_controller")] [SerializeField]
-        private OVRInput.Controller mController = OVRInput.Controller.None;
+        public InputDevice mController;
         [FormerlySerializedAs("m_animator")] [SerializeField]
         private Animator mAnimator = null;
         [FormerlySerializedAs("m_defaultGrabPose")] [SerializeField]
@@ -104,12 +101,13 @@ namespace OVRTouchSample
             _mAnimParamIndexFlex = Animator.StringToHash(AnimParamNameFlex);
             _mAnimParamIndexPose = Animator.StringToHash(AnimParamNamePose);
 
-            OVRManager.InputFocusAcquired += OnInputFocusAcquired;
-            OVRManager.InputFocusLost += OnInputFocusLost;
             
-            #if UNITY_EDITOR
-            OVRPlugin.SendEvent("custom_hand", (SceneManager.GetActiveScene().name == "CustomHands").ToString(), "sample_framework");
-            #endif
+            InputFocus.InputFocusAcquired += OnInputFocusAcquired;
+            InputFocus.InputFocusLost += OnInputFocusLost;
+            
+            //#if UNITY_EDITOR
+            //OVRPlugin.SendEvent("custom_hand", (SceneManager.GetActiveScene().name == "CustomHands").ToString(), "sample_framework");
+            //#endif
         }
 
         private int _pointLockCounter;
@@ -137,8 +135,8 @@ namespace OVRTouchSample
 
         private void OnDestroy()
         {
-            OVRManager.InputFocusAcquired -= OnInputFocusAcquired;
-            OVRManager.InputFocusLost -= OnInputFocusLost;
+            InputFocus.InputFocusAcquired -= OnInputFocusAcquired;
+            InputFocus.InputFocusLost -= OnInputFocusLost;
         }
 
         private void Update()
@@ -159,8 +157,11 @@ namespace OVRTouchSample
         // debouncing.
         private void UpdateCapTouchStates()
         {
-            _mIsPointing = !OVRInput.Get(OVRInput.NearTouch.PrimaryIndexTrigger, mController);
-            _mIsGivingThumbsUp = !OVRInput.Get(OVRInput.NearTouch.PrimaryThumbButtons, mController);
+            mController.TryGetFeatureValue(OculusUsages.indexTouch, out bool index);
+            mController.TryGetFeatureValue(OculusUsages.thumbrest, out bool thumb);
+
+            _mIsPointing = index;
+            _mIsGivingThumbsUp = thumb;
         }
 
         private void LateUpdate()
@@ -237,7 +238,8 @@ namespace OVRTouchSample
 
             // Flex
             // blend between open hand and fully closed fist
-            float flex = grabbing ? 1.0f : OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, mController);
+            mController.TryGetFeatureValue(new InputFeatureUsage<float>("Trigger"), out float value);
+            float flex = grabbing ? 1.0f : value;
             //m_animator.SetFloat(m_animParamIndexFlex, flex);
 
             float pointLockLerpValue = PointLockLerpValue();
