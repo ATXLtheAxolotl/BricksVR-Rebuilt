@@ -45,9 +45,9 @@ namespace OVRTouchSample
         [FormerlySerializedAs("m_controller")] [SerializeField]
         public InputDevice mController;
         [FormerlySerializedAs("m_animator")] [SerializeField]
-        private Animator mAnimator = null;
+        public Animator mAnimator = null;
         [FormerlySerializedAs("m_defaultGrabPose")] [SerializeField]
-        private HandPose mDefaultGrabPose = null;
+        public HandPose mDefaultGrabPose = null;
 
         private Collider[] _mColliders = null;
         private bool _mCollisionEnabled = true;
