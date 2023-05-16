@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+using System;
 
 public class TemporarilyDisableHand : MonoBehaviour
 {
@@ -21,16 +21,17 @@ public class TemporarilyDisableHand : MonoBehaviour
             _coroutine = StartCoroutine(TemporarilyDisableIEnum(0.4f));
     }
 
+    [Obsolete]
     private IEnumerator TemporarilyDisableIEnum(float time)
     {
-        _previousLayerMask = _xrDirectInteractor.InteractionLayerMask;
-        _xrDirectInteractor.InteractionLayerMask = 0;
+        _previousLayerMask = _xrDirectInteractor.interactionLayerMask;
+        _xrDirectInteractor.interactionLayerMask = 0;
 
         yield return new WaitForSeconds(time);
 
-        if (_xrDirectInteractor.InteractionLayerMask == 0)
+        if (_xrDirectInteractor.interactionLayerMask == 0)
         {
-            _xrDirectInteractor.InteractionLayerMask = _previousLayerMask;
+            _xrDirectInteractor.interactionLayerMask = _previousLayerMask;
         }
 
         _coroutine = null;

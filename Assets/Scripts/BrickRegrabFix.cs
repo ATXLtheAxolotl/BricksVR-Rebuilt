@@ -21,12 +21,12 @@ public class BrickRegrabFix : QuickInteractable
         XRDirectInteractor xrInteractor = interactor.GetComponent<XRDirectInteractor>();
         if (!xrInteractor) return;
 
-        if (_grabInteractable.isSelected && (_grabInteractable.m_SelectingInteractor != xrInteractor))
+        if (_grabInteractable.isSelected && (_grabInteractable.selectingInteractor != xrInteractor))
         {
             _brickAttachDetector.skipGrabCallbacks = true;
 
-            _grabInteractable.m_SelectingInteractor.GetComponent<TemporarilyDisableHand>().TemporarilyDisable();
-            _xrInteractionManager.ForceSwap(_grabInteractable.m_SelectingInteractor, xrInteractor, _grabInteractable);
+            _grabInteractable.selectingInteractor.GetComponent<TemporarilyDisableHand>().TemporarilyDisable();
+            _xrInteractionManager.ForceSelect(xrInteractor, _grabInteractable);
 
 
             _brickAttachDetector.skipGrabCallbacks = false;

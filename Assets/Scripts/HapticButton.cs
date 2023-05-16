@@ -80,7 +80,8 @@ public class HapticButton : MonoBehaviour
 
     private IEnumerator RunActivationHaptics(bool leftHand)
     {
-        yield return HapticsManager.PlayHapticsIEnum(1f, 1f, 0.05f, !leftHand, leftHand);
+        HapticsManager manager = HapticsManager.GetInstance();
+        yield return manager.PlayHapticsIEnum(1f, 1f, 0.05f, !leftHand, leftHand);
         _pressActivationHapticsCoroutine = null;
     }
 }

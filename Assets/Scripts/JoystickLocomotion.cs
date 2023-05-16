@@ -1,6 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR;
+using UnityEngine;
 
 public class JoystickLocomotion : MonoBehaviour
 {
@@ -9,6 +9,9 @@ public class JoystickLocomotion : MonoBehaviour
 
     private Vector2 _currentLeftJoystickDirection;
     private Vector2 _currentRightJoystickDirection;
+
+    private InputDevice rightInput;
+    private InputDevice leftInput;
 
     private float minY = 0.1f;
 
@@ -34,6 +37,9 @@ public class JoystickLocomotion : MonoBehaviour
         //    enabled = false;
         //}
 
+        rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+
         _headTransform = head.transform;
     }
 
@@ -44,8 +50,12 @@ public class JoystickLocomotion : MonoBehaviour
 
     private void Update()
     {
-        _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);
-        _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);
+        rightInput.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 right);
+        leftInput.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 left);
+
+
+        _currentLeftJoystickDirection = right;
+        _currentRightJoystickDirection = left;
 
         if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) // We only care about the y axis for the right stick
         {

@@ -17,14 +17,14 @@ public class PrecisionAttach : MonoBehaviour
 
     private void OnEnable()
     {
-        GetComponent<XRBaseInteractor>().onSelectEnter.AddListener(UpdatePos);
-        GetComponent<XRBaseInteractor>().onSelectExit.AddListener(ResetPos);
+        GetComponent<XRBaseInteractor>().onSelectEntered.AddListener(UpdatePos);
+        GetComponent<XRBaseInteractor>().onSelectExited.AddListener(ResetPos);
     }
 
     private void OnDisable()
     {
-        GetComponent<XRBaseInteractor>().onSelectEnter.RemoveListener(UpdatePos);
-        GetComponent<XRBaseInteractor>().onSelectExit.RemoveListener(ResetPos);
+        GetComponent<XRBaseInteractor>().onSelectEntered.RemoveListener(UpdatePos);
+        GetComponent<XRBaseInteractor>().onSelectExited.RemoveListener(ResetPos);
     }
 
     public void UpdatePos(XRBaseInteractable interactable)

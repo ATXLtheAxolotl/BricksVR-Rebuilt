@@ -60,14 +60,14 @@ public class BrickAttachDetector : MonoBehaviour
 
     private void OnEnable()
     {
-        GetComponent<XRBaseInteractable>().onSelectEnter.AddListener(BrickGrabbed);
-        GetComponent<XRBaseInteractable>().onSelectExit.AddListener(BrickReleased);
+        GetComponent<XRBaseInteractable>().onSelectEntered.AddListener(BrickGrabbed);
+        GetComponent<XRBaseInteractable>().onSelectExited.AddListener(BrickReleased);
     }
 
     private void OnDisable()
     {
-        GetComponent<XRBaseInteractable>()?.onSelectEnter.RemoveListener(BrickGrabbed);
-        GetComponent<XRBaseInteractable>().onSelectExit.RemoveListener(BrickReleased);
+        GetComponent<XRBaseInteractable>()?.onSelectEntered.RemoveListener(BrickGrabbed);
+        GetComponent<XRBaseInteractable>().onSelectExited.RemoveListener(BrickReleased);
     }
 
     private void BrickGrabbed(XRBaseInteractor interactor)
@@ -123,7 +123,7 @@ public class BrickAttachDetector : MonoBehaviour
 
         XRGrabInteractable ourInteractable = GetComponent<XRGrabInteractable>();
 
-        GetComponent<XRGrabInteractable>().interactionManager.ForceHoverExit(interactor, ourInteractable);
+        GetComponent<XRGrabInteractable>().interactionManager.HoverExit(interactor, ourInteractable);
 
         foreach (Collider c in colliders)
         {

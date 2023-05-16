@@ -15,8 +15,8 @@ public class UpdateConnectorLayerWhenHeld : MonoBehaviour
     {
         XRGrabInteractable interactable = GetComponent<XRGrabInteractable>();
         if (interactable == null) return;
-        interactable.onSelectEnter.AddListener(OnGrab);
-        interactable.onSelectExit.AddListener(OnRelease);
+        interactable.onSelectEntered.AddListener(OnGrab);
+        interactable.onSelectExited.AddListener(OnRelease);
     }
 
     private void OnGrab(XRBaseInteractor interactor)

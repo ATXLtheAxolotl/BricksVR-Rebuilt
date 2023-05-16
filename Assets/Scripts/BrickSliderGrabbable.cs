@@ -17,10 +17,10 @@ public class BrickSliderGrabbable : MonoBehaviour
     {
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         _unhoveredMaterial = sliderRenderer.materials[1];
-        grabInteractable.onHoverEnter.AddListener(OnSliderHovered);
-        grabInteractable.onHoverExit.AddListener(OnSliderUnhovered);
-        grabInteractable.onSelectEnter.AddListener(OnSliderGrabbed);
-        grabInteractable.onSelectExit.AddListener(OnSliderReleased);
+        grabInteractable.onHoverEntered.AddListener(OnSliderHovered);
+        grabInteractable.onHoverExited.AddListener(OnSliderUnhovered);
+        grabInteractable.onSelectEntered.AddListener(OnSliderGrabbed);
+        grabInteractable.onSelectExited.AddListener(OnSliderReleased);
     }
 
     private void Update()

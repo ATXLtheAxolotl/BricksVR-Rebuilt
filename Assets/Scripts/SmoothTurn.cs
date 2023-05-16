@@ -14,16 +14,19 @@ public class SmoothTurn : MonoBehaviour
     public float debugRotate = 0f;
 
     private XROrigin rig;
+    private InputDevice inputDevice;
 
     private void Start()
     {
         rig = GetComponent<XROrigin>();
+        inputDevice = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     }
 
     private void Update()
     {
-        InputDevices.GetDeviceAtXRNode(XRNode.LeftHand).TryGetFeatureValue(new InputFeatureUsage<Vector2>("Primary2DAxisTouch"), out Vector2 value);
-        float rotationAmount = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch).x;
+        inputDevice.TryGetFeatureValue(new InputFeatureUsage<Vector2>("Primary2DAxisTouch"), out Vector2 value);
+        float rotationAmount = value.x;
+
         if (Application.isEditor) rotationAmount = debugRotate;
         if (Mathf.Abs(rotationAmount) > deadZone)
         {

@@ -1,6 +1,7 @@
 ﻿using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.XR;
 using UnityEngine.UI;
 using UnityEngine;
 using System.Linq;
@@ -70,9 +71,15 @@ public class BrickPickerManager : MonoBehaviour
     public bool IsMenuFullyOpen => menuContentsObject.transform.localScale.magnitude > 1.7f;
     private List<(BrickPickerBrick brickPickerBrick, float distance)> hoveredBricksThisFrame = new List<(BrickPickerBrick brickPickerBrick, float distance)>();
 
+    private InputDevice rightInput;
+    private InputDevice leftInput;
+
     // Start is called before the first frame update
     private void Start()
     {
+        rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+
         fade = menuContentsObject.GetComponent<FadeBrickMenu>();
         _tabs = new Dictionary<string, MenuTab>()
         {
@@ -110,8 +117,11 @@ public class BrickPickerManager : MonoBehaviour
         if(_holdingMenu)
             RepositionMenu(_holdingMenuWithLeftHand);
 
-        if (_waitingToReleaseLeftButton && (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.Touch) || Input.GetKey(KeyCode.B))) return;
-        if (_waitingToReleaseRightButton && OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger, OVRInput.Controller.Touch)) return;
+        rightInput.IsPressed(InputHelpers.Button.Trigger, out bool rightPressed);
+        leftInput.IsPressed(InputHelpers.Button.Trigger, out bool leftPressed);
+
+        if (_waitingToReleaseLeftButton && (rightPressed || Input.GetKey(KeyCode.B))) return;
+        if (_waitingToReleaseRightButton && leftPressed) return;
 
         _waitingToReleaseLeftButton = false;
         _waitingToReleaseRightButton = false;
@@ -120,8 +130,8 @@ public class BrickPickerManager : MonoBehaviour
 
         // Not currently holding the menu
         if (!_holdingMenu && (
-                (leftJoystickDown = (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.Touch)) || Input.GetKey(KeyCode.B)) ||
-                OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger, OVRInput.Controller.Touch)
+                (leftJoystickDown = rightPressed || Input.GetKey(KeyCode.B)) ||
+                leftPressed
         ))
         {
             ToggleMenu(leftJoystickDown);
@@ -141,8 +151,8 @@ public class BrickPickerManager : MonoBehaviour
                     break;
             }
         } else if (_holdingMenu && (
-            (_holdingMenuWithLeftHand && (!OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.Touch) || !Input.GetKey(KeyCode.B))) ||
-            (!_holdingMenuWithLeftHand && !OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger, OVRInput.Controller.Touch))))
+            (_holdingMenuWithLeftHand && (!rightPressed || !Input.GetKey(KeyCode.B))) ||
+            (!_holdingMenuWithLeftHand && !leftPressed)))
         {
             _holdingMenu = false;
         }

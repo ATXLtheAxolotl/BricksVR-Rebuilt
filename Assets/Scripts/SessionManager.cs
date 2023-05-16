@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.Serialization;
 using UnityEngine.Android;
 using System.Collections;
+using UnityEngine.XR;
 using UnityEngine.UI;
 using System.Linq;
 using UnityEngine;
@@ -138,9 +139,12 @@ public class SessionManager : MonoBehaviour
         return instance;
     }
 
+    private InputDevice inputDevice;
+
     private IEnumerator Start()
     {
         _avatarManager = realtimeGameobject.GetComponent<AvatarManager>();
+        inputDevice = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
         _loadingObjectMat = loadingObjectRenderer.material;
         _roomName = "";
 
@@ -195,7 +199,8 @@ public class SessionManager : MonoBehaviour
 
     private void Update()
     {
-        if (session.isPlaying && (OVRInput.GetUp(OVRInput.Button.Start, OVRInput.Controller.Touch) || Input.GetKeyUp(KeyCode.M)))
+        inputDevice.IsPressed(InputHelpers.Button.MenuButton, out bool pressed);
+        if (session.isPlaying && pressed || Input.GetKeyUp(KeyCode.M))
         {
             if (!_inGameMenuUp)
             {

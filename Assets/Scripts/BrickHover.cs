@@ -71,18 +71,18 @@ public class BrickHover : MonoBehaviour
 
     private void OnEnable()
     {
-        GetComponent<XRBaseInteractor>().onHoverEnter.AddListener(HandHoverEnter);
-        GetComponent<XRBaseInteractor>().onHoverExit.AddListener(HandHoverExit);
-        GetComponent<XRBaseInteractor>().onSelectEnter.AddListener(HandSelectEnter);
-        GetComponent<XRBaseInteractor>().onSelectExit.AddListener(HandSelectExit);
+        GetComponent<XRBaseInteractor>().onHoverEntered.AddListener(HandHoverEnter);
+        GetComponent<XRBaseInteractor>().onHoverExited.AddListener(HandHoverExit);
+        GetComponent<XRBaseInteractor>().onSelectEntered.AddListener(HandSelectEnter);
+        GetComponent<XRBaseInteractor>().onSelectExited.AddListener(HandSelectExit);
     }
 
     private void OnDisable()
     {
-        GetComponent<XRBaseInteractor>().onHoverEnter.RemoveListener(HandHoverEnter);
-        GetComponent<XRBaseInteractor>().onHoverExit.RemoveListener(HandHoverExit);
-        GetComponent<XRBaseInteractor>().onSelectEnter.RemoveListener(HandSelectEnter);
-        GetComponent<XRBaseInteractor>().onSelectExit.RemoveListener(HandSelectExit);
+        GetComponent<XRBaseInteractor>().onHoverEntered.RemoveListener(HandHoverEnter);
+        GetComponent<XRBaseInteractor>().onHoverExited.RemoveListener(HandHoverExit);
+        GetComponent<XRBaseInteractor>().onSelectEntered.RemoveListener(HandSelectEnter);
+        GetComponent<XRBaseInteractor>().onSelectExited.RemoveListener(HandSelectExit);
     }
 
     private void HandSelectEnter(XRBaseInteractable interactable)

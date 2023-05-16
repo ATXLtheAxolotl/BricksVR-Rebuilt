@@ -13,14 +13,14 @@ public class EnableTeleportRayOnSelect : MonoBehaviour
     {
         _interactor = GetComponent<XRRayInteractor>();
         _lineVisual = GetComponent<XRInteractorLineVisual>();
-        _interactor.onSelectEnter.AddListener(OnEnter);
-        _interactor.onSelectExit.AddListener(OnExit);
+        _interactor.onSelectEntered.AddListener(OnEnter);
+        _interactor.onSelectExited.AddListener(OnExit);
     }
 
     private void OnDisable()
     {
-        _interactor.onSelectEnter.RemoveListener(OnEnter);
-        _interactor.onSelectExit.RemoveListener(OnExit);
+        _interactor.onSelectEntered.RemoveListener(OnEnter);
+        _interactor.onSelectExited.RemoveListener(OnExit);
     }
 
     private void OnEnter(XRBaseInteractable _)

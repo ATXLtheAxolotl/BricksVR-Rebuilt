@@ -1,10 +1,18 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.XR;
 using UnityEngine;
 
 public class HapticsManager : MonoBehaviour
 {
     private static HapticsManager _instance;
+
+    private bool supported;
+    public bool IsSupported {
+        get => supported;
+    }
+
+    private InputDevice rightInput;
+    private InputDevice leftInput;
 
     public static HapticsManager GetInstance()
     {
@@ -15,6 +23,18 @@ public class HapticsManager : MonoBehaviour
 
         return _instance;
     }
+
+    private void Start()
+    {
+        rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+
+        rightInput.TryGetHapticCapabilities(out HapticCapabilities rightCapabilities);
+        leftInput.TryGetHapticCapabilities(out HapticCapabilities leftCapabilities);
+
+        supported = rightCapabilities.supportsImpulse && leftCapabilities.supportsImpulse;
+    }
+
     public void PlayHaptics(float frequency, float amplitude, float duration, bool rightHand, bool leftHand)
     {
         StartCoroutine(PlayHapticsIEnum(frequency, amplitude, duration, rightHand, leftHand));
@@ -23,28 +43,29 @@ public class HapticsManager : MonoBehaviour
     // Use when you don't want to auto-disable haptics.
     public void StartHaptics(float frequency, float amplitude, bool rightHand, bool leftHand)
     {
-        if (rightHand) OVRInput.SetControllerVibration(frequency, amplitude, OVRInput.Controller.RTouch);
-        if (leftHand) OVRInput.SetControllerVibration(frequency, amplitude, OVRInput.Controller.LTouch);
+
+        if (rightHand) rightInput.SendHapticImpulse(0u, amplitude, float.PositiveInfinity);
+        if (leftHand) leftInput.SendHapticImpulse(0u, amplitude, float.PositiveInfinity);
 
         Debug.Log($"Playing @ {amplitude},{frequency}");
     }
 
     public void EndHaptics(bool rightHand, bool leftHand)
     {
-        if (rightHand) OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-        if (leftHand) OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        if (rightHand) rightInput.StopHaptics();
+        if (leftHand) leftInput.StopHaptics();
 
         Debug.Log($"Stopping");
     }
 
-    public static IEnumerator PlayHapticsIEnum(float frequency, float amplitude, float duration, bool rightHand, bool leftHand)
+    public IEnumerator PlayHapticsIEnum(float frequency, float amplitude, float duration, bool rightHand, bool leftHand)
     {
-        if (rightHand) OVRInput.SetControllerVibration(frequency, amplitude, OVRInput.Controller.RTouch);
-        if (leftHand) OVRInput.SetControllerVibration(frequency, amplitude, OVRInput.Controller.LTouch);
+        if (rightHand) rightInput.SendHapticImpulse(0u, amplitude, float.PositiveInfinity);
+        if (leftHand) leftInput.SendHapticImpulse(0u, amplitude, float.PositiveInfinity);
 
         yield return new WaitForSeconds(duration);
 
-        if (rightHand) OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-        if (leftHand) OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        if (rightHand) rightInput.SendHapticImpulse(0u, amplitude, float.PositiveInfinity);
+        if (leftHand) leftInput.SendHapticImpulse(0u, amplitude, float.PositiveInfinity);
     }
 }

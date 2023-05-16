@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+﻿using UnityEngine.XR.Interaction.Toolkit;
+using Unity.XR.CoreUtils;
+using UnityEngine;
 
 public class AdjustPlayerScale : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class AdjustPlayerScale : MonoBehaviour
 
     public JoystickLocomotion joystickLocomotion;
     public Camera headCamera;
-    public XRRig xrRig;
+    public XROrigin xrRig;
 
     public XRInteractorLineVisual leftMenuLaser;
     public XRInteractorLineVisual rightMenuLaser;
@@ -71,9 +72,9 @@ public class AdjustPlayerScale : MonoBehaviour
 
         Vector3 scaleVector = new Vector3(_scale, _scale, _scale);
 
-        Vector3 headPositionBefore = xrRig.cameraGameObject.transform.position;
+        Vector3 headPositionBefore = xrRig.Camera.gameObject.transform.position;
         rigTransformToScale.localScale = scaleVector;
-        Vector3 headPositionAfter = xrRig.cameraGameObject.transform.position;
+        Vector3 headPositionAfter = xrRig.Camera.gameObject.transform.position;
 
         FixHeadPosition(headPositionBefore, headPositionAfter);
         SetBrickPickerMenuScale();

@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections.Generic;
+using UnityEngine.XR;
 using UnityEngine;
+using System.Linq;
 
 // [RequireComponent(typeof(Rigidbody))]
 public class QuickInteractor : MonoBehaviour
@@ -10,11 +12,12 @@ public class QuickInteractor : MonoBehaviour
 
     private Dictionary<GameObject, QuickInteractable> _hoveredObjects;
 
-    private OVRInput.Button _trigger;
-
     private GameObject _tempHoveredObject;
     private QuickInteractable _tempHoveredInteractable;
     private BrickHover _brickHover;
+
+    private InputDevice rightInput;
+    private InputDevice leftInput;
 
     private bool _debugGrabEnabled;
 
@@ -23,9 +26,11 @@ public class QuickInteractor : MonoBehaviour
     void Awake()
     {
         _hoveredObjects = new Dictionary<GameObject, QuickInteractable>();
-        _trigger = leftHand ? OVRInput.Button.PrimaryHandTrigger : OVRInput.Button.SecondaryHandTrigger;
         _brickHover = GetComponent<BrickHover>();
         _debugGrabEnabled = leftHand && Application.isEditor;
+
+        rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
     }
 
     private void OnTriggerEnter(Collider c)
@@ -55,7 +60,7 @@ public class QuickInteractor : MonoBehaviour
     {
         if (_interacting)
         {
-            if ((!_debugGrabEnabled && !OVRInput.Get(_trigger, OVRInput.Controller.Touch)) || (_debugGrabEnabled && !Input.GetMouseButton(0)))
+            if ((!_debugGrabEnabled && !TriggerPressed()) || (_debugGrabEnabled && !Input.GetMouseButton(0)))
             {
                 _interacting = false;
             }
@@ -63,7 +68,7 @@ public class QuickInteractor : MonoBehaviour
         else
         {
             if (_hoveredObjects.Count == 0) return;
-            if (!OVRInput.Get(_trigger, OVRInput.Controller.Touch) && !(_debugGrabEnabled && Input.GetMouseButton(0))) return;
+            if (!TriggerPressed() && !(_debugGrabEnabled && Input.GetMouseButton(0))) return;
 
             CleanHoveredList();
             if (_hoveredObjects.Count == 0) return;
@@ -97,5 +102,19 @@ public class QuickInteractor : MonoBehaviour
     private static bool Contains(LayerMask mask, int layer)
     {
         return mask == (mask | (1 << layer));
+    }
+
+    private bool TriggerPressed()
+    {
+        if (leftHand)
+        {
+            leftInput.IsPressed(InputHelpers.Button.TriggerButton, out bool pressed);
+            return pressed;
+        }
+        else
+        {
+            leftInput.IsPressed(InputHelpers.Button.TriggerButton, out bool pressed);
+            return pressed;
+        }
     }
 }

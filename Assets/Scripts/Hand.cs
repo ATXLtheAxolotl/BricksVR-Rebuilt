@@ -12,10 +12,13 @@ language governing permissions and limitations under the license.
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections.Generic;
 using UnityEngine.Serialization;
-using Unity.XR.Oculus;
 using UnityEngine.XR;
 using System.Linq;
 using UnityEngine;
+
+#if !OCULUSPLUGIN_UNSUPPORTED_PLATFORM
+using Unity.XR.Oculus;
+#endif
 
 namespace OVRTouchSample
 {
@@ -157,11 +160,13 @@ namespace OVRTouchSample
         // debouncing.
         private void UpdateCapTouchStates()
         {
-            mController.TryGetFeatureValue(OculusUsages.indexTouch, out bool index);
-            mController.TryGetFeatureValue(OculusUsages.thumbrest, out bool thumb);
+            #if !OCULUSPLUGIN_UNSUPPORTED_PLATFORM
+                mController.TryGetFeatureValue(OculusUsages.indexTouch, out bool index);
+                mController.TryGetFeatureValue(OculusUsages.thumbrest, out bool thumb);
 
-            _mIsPointing = index;
-            _mIsGivingThumbsUp = thumb;
+                _mIsPointing = index;
+                _mIsGivingThumbsUp = thumb;
+            #endif
         }
 
         private void LateUpdate()

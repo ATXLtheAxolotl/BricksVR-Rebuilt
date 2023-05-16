@@ -12,8 +12,8 @@ public class TutorialManager : MonoBehaviour
     public GameObject tutorialEnvContents;
 
     public Session session;
-
-    public SnapTurnProvider snapTurnProvider;
+    
+    public DeviceBasedSnapTurnProvider snapTurnProvider;
     public SmoothTurn smoothTurn;
 
     public BrickPickerManager brickPickerManager;
@@ -71,7 +71,7 @@ public class TutorialManager : MonoBehaviour
 
     private int _initialLateralMovementIndex;
     private int _initialVerticalMovementIndex;
-    private int _initialSnapTurnIndex;
+    private float _initialSnapTurnIndex;
     private int _initialBrickMenuIndex;
     private int _numberOfBricks;
     private int _initialHandBrickSpawnerIndex;
@@ -312,7 +312,7 @@ public class TutorialManager : MonoBehaviour
         yield return AnimateBetweenTextObjectsWithCross(fourthTextBox, fifthTextBox);
         _advancing = false;
         _updateAction = UpdateFifthPart;
-        _initialSnapTurnIndex = snapTurnProvider.turnIndex;
+        _initialSnapTurnIndex = snapTurnProvider.turnAmount;
     }
 
     /*
@@ -321,7 +321,7 @@ public class TutorialManager : MonoBehaviour
 
     private void UpdateFifthPart()
     {
-        if(!_advancing && ((snapTurnProvider.turnIndex != _initialSnapTurnIndex) || (Input.GetKey(KeyCode.R))))
+        if(!_advancing && ((snapTurnProvider.turnAmount != _initialSnapTurnIndex) || (Input.GetKey(KeyCode.R))))
         {
             _advancing = true;
             StartCoroutine(MoveToSixthStep());

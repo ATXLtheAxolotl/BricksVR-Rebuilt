@@ -133,19 +133,19 @@ public class SliderGrabbable : MonoBehaviour
     {
         XRBaseInteractable interactable = GetComponent<XRBaseInteractable>();
 
-        interactable.onSelectEnter.AddListener(SliderGrabbed);
-        interactable.onSelectExit.AddListener(SliderReleased);
-        interactable.onHoverEnter.AddListener(SliderHovered);
-        interactable.onHoverExit.AddListener(SliderUnHovered);
+        interactable.onSelectEntered.AddListener(SliderGrabbed);
+        interactable.onSelectExited.AddListener(SliderReleased);
+        interactable.onHoverEntered.AddListener(SliderHovered);
+        interactable.onHoverExited.AddListener(SliderUnHovered);
     }
 
     private void OnDisable()
     {
         XRBaseInteractable interactable = GetComponent<XRBaseInteractable>();
 
-        interactable.onSelectEnter.RemoveListener(SliderGrabbed);
-        interactable.onSelectExit.RemoveListener(SliderReleased);
-        interactable.onHoverEnter.RemoveListener(SliderHovered);
-        interactable.onHoverExit.RemoveListener(SliderUnHovered);
+        interactable.onSelectEntered.RemoveListener(SliderGrabbed);
+        interactable.onSelectExited.RemoveListener(SliderReleased);
+        interactable.onHoverEntered.RemoveListener(SliderHovered);
+        interactable.onHoverExited.RemoveListener(SliderUnHovered);
     }
 }

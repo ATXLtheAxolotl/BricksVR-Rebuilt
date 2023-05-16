@@ -1,4 +1,5 @@
 ﻿using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,8 +14,8 @@ public class HandBrickSpawner : MonoBehaviour
 
     private BrickHover _brickHover;
 
-    private Dictionary<OVRInput.Button, ButtonDownInfo> _infoForButtons;
-    private OVRInput.Button[] _buttons;
+    private Dictionary<InputHelpers.Button, ButtonDownInfo> _infoForButtons;
+    private InputHelpers.Button[] _buttons;
 
     private XRDirectInteractor _interactor;
     private QuickInteractor _quickInteractor;
@@ -28,18 +29,11 @@ public class HandBrickSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        if (leftHand)
-        {
-            _buttons = new OVRInput.Button[2] {OVRInput.Button.Three, OVRInput.Button.Four};
-        }
-        else
-        {
-            _buttons = new OVRInput.Button[2] {OVRInput.Button.One, OVRInput.Button.Two};
-        }
+        _buttons = new InputHelpers.Button[2] { InputHelpers.Button.SecondaryButton, InputHelpers.Button.PrimaryButton };
 
-        _infoForButtons = new Dictionary<OVRInput.Button, ButtonDownInfo>();
+        _infoForButtons = new Dictionary<InputHelpers.Button, ButtonDownInfo>();
 
-        foreach (OVRInput.Button button in _buttons)
+        foreach (InputHelpers.Button button in _buttons)
         {
             _infoForButtons[button] = new ButtonDownInfo();
         }
@@ -55,17 +49,24 @@ public class HandBrickSpawner : MonoBehaviour
     {
         if (!_session.isPlaying) return;
 
-        foreach (OVRInput.Button button in _buttons)
+        foreach (InputHelpers.Button button in _buttons)
         {
             CheckButtonDown(button);
             HandleButtonHold(button);
         }
     }
 
-    private void CheckButtonDown(OVRInput.Button button)
+    private void CheckButtonDown(InputHelpers.Button button)
     {
+        InputDevice rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        InputDevice leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+
+        rightInput.IsPressed(button, out bool right);
+        leftInput.IsPressed(button, out bool left);
+
+
         ButtonDownInfo info = _infoForButtons[button];
-        bool down = OVRInput.Get(button, OVRInput.Controller.Touch) || IsDebugTrue(button);
+        bool down = right || left || Input.GetMouseButton(0);
         if (down != info.ButtonDown)
         {
             if (!down && info.FramesDownFor > 0 && info.FramesDownFor < 30) HandleButtonPress(button);
@@ -76,7 +77,7 @@ public class HandBrickSpawner : MonoBehaviour
         }
     }
 
-    private void HandleButtonHold(OVRInput.Button button)
+    private void HandleButtonHold(InputHelpers.Button button)
     {
         if (_interactor.selectTarget) return;
         if (SessionManager.InGameMenuUp()) return;
@@ -110,7 +111,7 @@ public class HandBrickSpawner : MonoBehaviour
         _infoForButtons[button] = info;
     }
 
-    private void HandleButtonPress(OVRInput.Button button)
+    private void HandleButtonPress(InputHelpers.Button button)
     {
         if (_interactor.selectTarget) return;
         if (SessionManager.InGameMenuUp()) return;
@@ -134,12 +135,6 @@ public class HandBrickSpawner : MonoBehaviour
         attach.Color = ColorInt.IntToColor32(info.SavedColor);
         brick.GetComponent<BrickUuid>().uuid = BrickId.FetchNewBrickID();
         brick.GetComponent<Rigidbody>().isKinematic = false;
-    }
-
-    // TODO: DISABLE THIS IN PROD
-    private bool IsDebugTrue(OVRInput.Button button)
-    {
-        return (button == OVRInput.Button.Two && Input.GetMouseButton(0));
     }
 
     // Either a real brick, or a BrickPickerBrick object

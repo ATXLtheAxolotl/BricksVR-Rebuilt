@@ -14,12 +14,12 @@ public class NetworkedInteractor : MonoBehaviour
 
     private void OnEnable()
     {
-        _interactor.onSelectEnter.AddListener(OnGrab);
+        _interactor.onSelectEntered.AddListener(OnGrab);
     }
 
     private void OnDisable()
     {
-        _interactor.onSelectEnter.RemoveListener(OnGrab);
+        _interactor.onSelectEntered.RemoveListener(OnGrab);
     }
 
     private void OnGrab(XRBaseInteractable interactable)
