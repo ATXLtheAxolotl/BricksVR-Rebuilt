@@ -1,6 +1,7 @@
 ﻿using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
 using System.Linq;
 using UnityEngine;
 using System;
@@ -58,15 +59,15 @@ public class HandBrickSpawner : MonoBehaviour
 
     private void CheckButtonDown(InputHelpers.Button button)
     {
-        InputDevice rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        InputDevice leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        UnityEngine.XR.InputDevice rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        UnityEngine.XR.InputDevice leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
 
         rightInput.IsPressed(button, out bool right);
         leftInput.IsPressed(button, out bool left);
 
 
         ButtonDownInfo info = _infoForButtons[button];
-        bool down = right || left || Input.GetMouseButton(0);
+        bool down = right || left || Mouse.current.rightButton.isPressed;
         if (down != info.ButtonDown)
         {
             if (!down && info.FramesDownFor > 0 && info.FramesDownFor < 30) HandleButtonPress(button);

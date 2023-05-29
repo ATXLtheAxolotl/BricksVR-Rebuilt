@@ -3,6 +3,7 @@ using Random = UnityEngine.Random;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 using UnityEngine.Android;
 using System.Collections;
 using UnityEngine.XR;
@@ -139,7 +140,7 @@ public class SessionManager : MonoBehaviour
         return instance;
     }
 
-    private InputDevice inputDevice;
+    private UnityEngine.XR.InputDevice inputDevice;
 
     private IEnumerator Start()
     {
@@ -200,7 +201,7 @@ public class SessionManager : MonoBehaviour
     private void Update()
     {
         inputDevice.IsPressed(InputHelpers.Button.MenuButton, out bool pressed);
-        if (session.isPlaying && pressed || Input.GetKeyUp(KeyCode.M))
+        if (session.isPlaying && pressed || Keyboard.current[Key.M].wasReleasedThisFrame)
         {
             if (!_inGameMenuUp)
             {

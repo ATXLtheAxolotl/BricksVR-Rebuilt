@@ -1,5 +1,6 @@
 ﻿using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.XR;
 using UnityEngine.UI;
@@ -71,8 +72,8 @@ public class BrickPickerManager : MonoBehaviour
     public bool IsMenuFullyOpen => menuContentsObject.transform.localScale.magnitude > 1.7f;
     private List<(BrickPickerBrick brickPickerBrick, float distance)> hoveredBricksThisFrame = new List<(BrickPickerBrick brickPickerBrick, float distance)>();
 
-    private InputDevice rightInput;
-    private InputDevice leftInput;
+    private UnityEngine.XR.InputDevice rightInput;
+    private UnityEngine.XR.InputDevice leftInput;
 
     // Start is called before the first frame update
     private void Start()
@@ -130,7 +131,7 @@ public class BrickPickerManager : MonoBehaviour
 
         // Not currently holding the menu
         if (!_holdingMenu && (
-                (leftJoystickDown = rightPressed || Input.GetKey(KeyCode.B)) ||
+                (leftJoystickDown = rightPressed || Keyboard.current[Key.B].isPressed) ||
                 leftPressed
         ))
         {

@@ -78,9 +78,8 @@ namespace OVRTouchSample
 
         private void Start()
         {
-            if(avatar.GetComponent<PlayerAvatar>().isLocal){
+            if(avatar.GetComponent<PlayerAvatar>().isLocal)
                 _isLocalHand = true;
-            }
 
             if (_isLocalHand)
             {
@@ -95,7 +94,7 @@ namespace OVRTouchSample
             _mShowAfterInputFocusAcquired = new List<Renderer>();
 
             // Collision starts disabled. We'll enable it for certain cases such as making a fist.
-            _mColliders = this.GetComponentsInChildren<Collider>().Where(childCollider => !childCollider.isTrigger).ToArray();
+            _mColliders = GetComponentsInChildren<Collider>().Where(childCollider => !childCollider.isTrigger).ToArray();
             CollisionEnable(false);
 
             // Get animator layer indices by name, for later use switching between hand visuals
@@ -107,10 +106,6 @@ namespace OVRTouchSample
             
             InputFocus.InputFocusAcquired += OnInputFocusAcquired;
             InputFocus.InputFocusLost += OnInputFocusLost;
-            
-            //#if UNITY_EDITOR
-            //OVRPlugin.SendEvent("custom_hand", (SceneManager.GetActiveScene().name == "CustomHands").ToString(), "sample_framework");
-            //#endif
         }
 
         private int _pointLockCounter;

@@ -54,6 +54,7 @@ public class JoystickLocomotion : MonoBehaviour
         leftInput.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 left);
 
 
+        // Looks weird, but it is correct.
         _currentLeftJoystickDirection = right;
         _currentRightJoystickDirection = left;
 
@@ -76,7 +77,6 @@ public class JoystickLocomotion : MonoBehaviour
             movement.y = Mathf.Max(0, movement.y); // Erase negative y movement if we're at the floor, but still allow the player to move up.
         }
 
-        Vector3 oldPosition = transform.position;
         transform.position += movement;
 
         //if (!keepPlayerOutOfWalls.IsHeadPositionAllowed(_headTransform.position))

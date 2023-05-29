@@ -1,21 +1,22 @@
-﻿using UnityEngine.XR;
+﻿using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class ControllerButtonInput : MonoBehaviour
 {
     public GameObject realtimeObject;
-    public GameObject leftMenuHand;
     public GameObject rightMenuHand;
+    public GameObject leftMenuHand;
 
-    private InputDevice _activeController;
+    public InputActionReference rightInputAction;
+    public InputActionReference leftInputAction;
 
     private Session _session;
     private bool _reset;
     private bool inMenu = true;
 
-    private InputDevice rightHand;
-    private InputDevice leftHand;
+    private bool left = false;
 
     // Start is called before the first frame update
     public void Start()
@@ -23,9 +24,12 @@ public class ControllerButtonInput : MonoBehaviour
         _session = realtimeObject.GetComponent<Session>();
         _reset = false;
 
-        leftMenuHand.SetActive(true);
+        
         rightMenuHand.SetActive(false);
-        _activeController = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+        leftMenuHand.SetActive(true);
+
+        rightInputAction.action.started += RightInput;
+        leftInputAction.action.started += LeftInput;
     }
 
     // Update is called once per frame
@@ -52,8 +56,27 @@ public class ControllerButtonInput : MonoBehaviour
         inMenu = false;
     }
 
+    private void RightInput(InputAction.CallbackContext context)
+    {
+        if (!left) return;
+        left = false;
+
+        rightMenuHand.SetActive(true);
+        leftMenuHand.SetActive(false);
+    }
+
+    private void LeftInput(InputAction.CallbackContext context)
+    {
+        if (left) return;
+        left = true;
+
+        rightMenuHand.SetActive(false);
+        leftMenuHand.SetActive(true);
+    }
+
     private void MenuLogic()
     {
+        // Switch laser if we press the opposite trigger.
         //     if (_activeController == OVRInput.Controller.None)
         //     {
         //         OVRInput.Controller controller = OVRInput.GetActiveController();
@@ -76,25 +99,6 @@ public class ControllerButtonInput : MonoBehaviour
         //             rightMenuHand.SetActive(true);
         //         }
         //     }
-
-        // Switch laser if we press the opposite trigger
-        rightHand.IsPressed(InputHelpers.Button.TriggerButton, out bool primaryPressed, 0.5f);
-        leftHand.IsPressed(InputHelpers.Button.TriggerButton, out bool secondaryPressed, 0.5f);
-
-        if (_activeController == leftHand && secondaryPressed || Input.GetMouseButtonDown(1))
-        {
-            _activeController = rightHand;
-
-            rightMenuHand.SetActive(true);
-            leftMenuHand.SetActive(false);
-        }
-        else if (_activeController == rightHand && (primaryPressed || Input.GetMouseButtonDown(1)))
-        {
-            _activeController = leftHand;
-
-            rightMenuHand.SetActive(false);
-            leftMenuHand.SetActive(true);
-        }
     }
 
     private void ResetMenuState()
