@@ -12,13 +12,11 @@ language governing permissions and limitations under the license.
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections.Generic;
 using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
+using Unity.XR.Oculus;
 using UnityEngine.XR;
 using System.Linq;
 using UnityEngine;
-
-#if !OCULUSPLUGIN_UNSUPPORTED_PLATFORM
-using Unity.XR.Oculus;
-#endif
 
 namespace OVRTouchSample
 {
@@ -43,7 +41,7 @@ namespace OVRTouchSample
 
 
         [FormerlySerializedAs("m_controller")] [SerializeField]
-        public InputDevice mController;
+        public UnityEngine.XR.InputDevice mController;
         [FormerlySerializedAs("m_animator")] [SerializeField]
         public Animator mAnimator = null;
         [FormerlySerializedAs("m_defaultGrabPose")] [SerializeField]
@@ -53,6 +51,9 @@ namespace OVRTouchSample
         private bool _mCollisionEnabled = true;
         public XRDirectInteractor mGrabber;
         private bool _isLocalHand = false;
+
+        public InputActionReference triggerTouchRelease;
+        public InputActionReference indexTouchRelease;
 
         List<Renderer> _mShowAfterInputFocusAcquired;
 
@@ -78,7 +79,7 @@ namespace OVRTouchSample
 
         private void Start()
         {
-            if(avatar.GetComponent<PlayerAvatar>().isLocal)
+            if (avatar.GetComponent<PlayerAvatar>().isLocal)
                 _isLocalHand = true;
 
             if (_isLocalHand)
@@ -103,7 +104,7 @@ namespace OVRTouchSample
             _mAnimParamIndexFlex = Animator.StringToHash(AnimParamNameFlex);
             _mAnimParamIndexPose = Animator.StringToHash(AnimParamNamePose);
 
-            
+
             InputFocus.InputFocusAcquired += OnInputFocusAcquired;
             InputFocus.InputFocusLost += OnInputFocusLost;
         }
@@ -155,13 +156,10 @@ namespace OVRTouchSample
         // debouncing.
         private void UpdateCapTouchStates()
         {
-            #if !OCULUSPLUGIN_UNSUPPORTED_PLATFORM
-                mController.TryGetFeatureValue(OculusUsages.indexTouch, out bool index);
-                mController.TryGetFeatureValue(OculusUsages.thumbrest, out bool thumb);
+            //mController.TryGetFeatureValue(OculusUsages.thumbrest, out bool thumb);
 
-                _mIsPointing = index;
-                _mIsGivingThumbsUp = thumb;
-            #endif
+            _mIsPointing = !triggerTouchRelease.action.WasPressedThisFrame();
+            _mIsGivingThumbsUp = indexTouchRelease.action.WasPressedThisFrame();
         }
 
         private void LateUpdate()

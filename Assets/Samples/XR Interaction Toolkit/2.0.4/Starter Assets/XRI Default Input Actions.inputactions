@@ -556,10 +556,21 @@
                 },
                 {
                     "name": "",
-                    "id": "8e383b1a-270f-4c20-819b-89a59cffb498",
-                    "path": "<XRController>{LeftHand}/Primary2DAxis",
+                    "id": "eea2094d-04b7-4ae2-9604-db1683305172",
+                    "path": "<XRController>{LeftHand}/primary2DAxis",
                     "interactions": "",
-                    "processors": "StickDeadzone",
+                    "processors": "",
+                    "groups": "Continuous Move",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1438d735-8433-4816-8c44-2872d235942e",
+                    "path": "<OculusTouchController>/thumbstick",
+                    "interactions": "",
+                    "processors": "",
                     "groups": "Continuous Move",
                     "action": "Move",
                     "isComposite": false,
@@ -1071,6 +1082,17 @@
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f629a377-b481-4ec3-8642-2276179fc3bb",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Continuous Move",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -1100,17 +1122,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "5034b170-0154-4c5b-bc71-dd18f6b1f419",
-                    "path": "<XRController>{RightHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Trigger Right",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "0c431c28-fdc7-437d-9589-25c15340e398",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -1122,8 +1133,19 @@
                 },
                 {
                     "name": "",
+                    "id": "5034b170-0154-4c5b-bc71-dd18f6b1f419",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "cd2a1e41-353f-4ba3-bdf0-11fd3d0e68e1",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1139,6 +1161,94 @@
                     "processors": "",
                     "groups": "",
                     "action": "Trigger Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Hovered Actions",
+            "id": "06079e99-c31e-4fe1-82de-e957b2a5f143",
+            "actions": [
+                {
+                    "name": "Left Index Release",
+                    "type": "Button",
+                    "id": "017d9464-59ea-4a72-8879-21ac24b10e62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Left Trigger",
+                    "type": "Button",
+                    "id": "ca2338f3-97b1-4735-8a7d-1a122f0c34c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Right Index",
+                    "type": "Button",
+                    "id": "3fa07490-d22f-4246-90a0-a6efdf869d25",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right Trigger",
+                    "type": "Button",
+                    "id": "31ae340f-109d-43b6-8681-4b8f276d56a9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "51a7297b-a9f3-4209-856f-f44582d1972a",
+                    "path": "<OculusTouchController>/primaryTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Index Release",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8957bbe0-69d3-4d2b-a1a0-24c6f666d058",
+                    "path": "<OculusTouchController>{LeftHand}/triggerTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d68a06a4-0fb9-4d73-befd-e4dc66cd536c",
+                    "path": "<OculusTouchController>{RightHand}/primaryTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Index",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bcc892e8-389c-4a77-8d39-0f218fedc727",
+                    "path": "<OculusTouchController>{RightHand}/triggerTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right Trigger",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

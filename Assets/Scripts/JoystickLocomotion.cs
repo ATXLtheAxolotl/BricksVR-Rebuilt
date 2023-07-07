@@ -1,4 +1,4 @@
-﻿using UnityEngine.XR.Interaction.Toolkit;
+﻿using UnityEngine.InputSystem;
 using UnityEngine.XR;
 using UnityEngine;
 
@@ -9,9 +9,6 @@ public class JoystickLocomotion : MonoBehaviour
 
     private Vector2 _currentLeftJoystickDirection;
     private Vector2 _currentRightJoystickDirection;
-
-    private InputDevice rightInput;
-    private InputDevice leftInput;
 
     private float minY = 0.1f;
 
@@ -29,6 +26,9 @@ public class JoystickLocomotion : MonoBehaviour
 
     public float playerScaleMultiplier = 1f;
 
+    public InputActionReference rightJoystick;
+    public InputActionReference leftJoystick;
+
     private void Start()
     {
         // TODO: Work on VR Simulator script some more before turning this off
@@ -36,9 +36,6 @@ public class JoystickLocomotion : MonoBehaviour
         //{
         //    enabled = false;
         //}
-
-        rightInput = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
-        leftInput = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
 
         _headTransform = head.transform;
     }
@@ -50,18 +47,15 @@ public class JoystickLocomotion : MonoBehaviour
 
     private void Update()
     {
-        rightInput.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 right);
-        leftInput.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 left);
+        _currentRightJoystickDirection = rightJoystick.action.ReadValue<Vector2>();
+        _currentLeftJoystickDirection = leftJoystick.action.ReadValue<Vector2>();
 
+        print(_currentLeftJoystickDirection);
 
-        // Looks weird, but it is correct.
-        _currentLeftJoystickDirection = right;
-        _currentRightJoystickDirection = left;
-
-        if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) // We only care about the y axis for the right stick
-        {
-            MovePlayer();
-        }
+        if (
+            _currentLeftJoystickDirection.magnitude > joystickDeadzone || 
+            Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone // We only care about the y axis for the right stick
+        ) MovePlayer();
     }
 
     private void MovePlayer()

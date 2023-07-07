@@ -35,14 +35,8 @@ public class ControllerButtonInput : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if ((!_session.isPlaying && !_session.isLoading) || inMenu)
-        {
-            MenuLogic();
-        }
-        else if (!_reset)
-        {
-            ResetMenuState();
-        }
+        if (_reset) return;
+        ResetMenuState();
     }
 
     public void EnableMenuControls()
@@ -56,8 +50,17 @@ public class ControllerButtonInput : MonoBehaviour
         inMenu = false;
     }
 
+    public bool CanSwitch()
+    {
+        if (inMenu) return true;
+        else if (!_session.isPlaying && !_session.isLoading) return true;
+
+        return false;
+    }
+
     private void RightInput(InputAction.CallbackContext context)
     {
+        if (!CanSwitch()) return;
         if (!left) return;
         left = false;
 
@@ -67,38 +70,12 @@ public class ControllerButtonInput : MonoBehaviour
 
     private void LeftInput(InputAction.CallbackContext context)
     {
+        if (!CanSwitch()) return;
         if (left) return;
         left = true;
 
         rightMenuHand.SetActive(false);
         leftMenuHand.SetActive(true);
-    }
-
-    private void MenuLogic()
-    {
-        // Switch laser if we press the opposite trigger.
-        //     if (_activeController == OVRInput.Controller.None)
-        //     {
-        //         OVRInput.Controller controller = OVRInput.GetActiveController();
-        //         if (controller == OVRInput.Controller.Touch || controller == OVRInput.Controller.RTouch)
-        //         {
-        //             _activeController = OVRInput.Controller.RTouch;
-        //             rightMenuHand.SetActive(true);
-        //             leftMenuHand.SetActive(false);
-        //         }
-        //         else if (controller == OVRInput.Controller.LTouch)
-        //         {
-        //             _activeController = OVRInput.Controller.LTouch;
-        //             leftMenuHand.SetActive(true);
-        //             rightMenuHand.SetActive(false);
-        //         }
-        //         else
-        //         {
-        //             _activeController = OVRInput.Controller.RTouch;
-        //             leftMenuHand.SetActive(false);
-        //             rightMenuHand.SetActive(true);
-        //         }
-        //     }
     }
 
     private void ResetMenuState()
